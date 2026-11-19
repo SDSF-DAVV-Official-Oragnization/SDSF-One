@@ -140,9 +140,13 @@ require_once __DIR__ . '/includes/header.php';
               <div class="clean-notice-title-row">
                 <span class="clean-notice-bullet <?php echo $is_first ? 'bullet-blue' : ''; ?>">&bull;</span>
                 <h3 class="clean-notice-title">
-                  <a href="#" onclick="toggleNoticeModal(<?php echo $notice['id']; ?>); return false;">
+                  <?php if ($notice['file_url'] !== '#'): ?>
+                    <a href="<?php echo htmlspecialchars($notice['file_url'], ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
+                  <?php endif; ?>
                     <?php echo htmlspecialchars($notice['title']); ?>
-                  </a>
+                  <?php if ($notice['file_url'] !== '#'): ?>
+                    </a>
+                  <?php endif; ?>
                 </h3>
               </div>
 
