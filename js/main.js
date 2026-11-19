@@ -15,99 +15,91 @@ document.addEventListener('DOMContentLoaded', function () {
 function initDropdowns() {
   document.addEventListener('click', function (e) {
     const toggle = e.target.closest('.chronicle-dropdown-toggle');
+    const dropdown = e.target.closest('.chronicle-dropdown');
 
-    if (toggle) {
+    if (toggle && dropdown) {
       e.preventDefault();
-      const parent = toggle.closest('.chronicle-dropdown');
-      const wasOpen = parent ? parent.classList.contains('open') : false;
-      document.querySelectorAll('.chronicle-dropdown.open').forEach(d => d.classList.remove('open'));
-      if (parent && !wasOpen) {
-        parent.classList.add('open');
+      e.stopPropagation();
+      const menu = dropdown.querySelector('.chronicle-dropdown-menu');
+      const wasOpen = dropdown.classList.contains('open');
+      document.querySelectorAll('.chronicle-dropdown.open').forEach(d => {
+        d.classList.remove('open');
+        d.querySelector('.chronicle-dropdown-menu')?.classList.remove('show');
+        d.querySelector('.chronicle-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        dropdown.classList.add('open');
+        if (menu) menu.classList.add('show');
         toggle.setAttribute('aria-expanded', 'true');
-      } else if (toggle) {
-        toggle.setAttribute('aria-expanded', 'false');
       }
     } else if (!e.target.closest('.chronicle-dropdown-menu')) {
       document.querySelectorAll('.chronicle-dropdown.open').forEach(d => {
         d.classList.remove('open');
+        d.querySelector('.chronicle-dropdown-menu')?.classList.remove('show');
         d.querySelector('.chronicle-dropdown-toggle')?.setAttribute('aria-expanded', 'false');
       });
     }
   });
 
+  // Handle dropdown item click on timetable page
+  document.querySelectorAll('.chronicle-dropdown-item').forEach(item => {
+    item.addEventListener('click', function (e) {
+      const href = this.getAttribute('href') || '';
+      document.querySelectorAll('.chronicle-dropdown.open').forEach(d => {
+        d.classList.remove('open');
+        d.querySelector('.chronicle-dropdown-menu')?.classList.remove('show');
+      });
+
+      if ((window.location.pathname.endsWith('timetable.html') || window.location.pathname.endsWith('/timetable')) && href.includes('#')) {
+        const targetId = href.split('#')[1];
+        const targetEl = document.getElementById(targetId);
+        if (targetEl) {
+          e.preventDefault();
+          targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          if (history.pushState) {
+            history.pushState(null, '', `#${targetId}`);
+          }
+        }
+      }
+    });
+  });
+
   // Handle URL query parameters or hash on timetable page
-  if (document.getElementById('academic-tt-details') || document.getElementById('exam-tt-details')) {
+  if (window.location.pathname.includes('timetable')) {
+    const hash = window.location.hash;
     const urlParams = new URLSearchParams(window.location.search);
-    const type = urlParams.get('type') || (window.location.hash ? window.location.hash.replace('#', '') : null);
-    if (type === 'exam' || type === 'examination') {
-      selectTimetableType('exam');
-    } else if (type === 'academic') {
-      selectTimetableType('academic');
+    const type = urlParams.get('type') || (hash ? hash.replace('#', '') : null);
+    let targetEl = null;
+
+    if (type === 'academic' || hash === '#academic-timetable') {
+      targetEl = document.getElementById('academic-timetable') || document.getElementById('academic-tt-details');
+    } else if (type === 'exam' || type === 'examination' || hash === '#examination-timetable') {
+      targetEl = document.getElementById('examination-timetable') || document.getElementById('exam-tt-details');
+    }
+
+    if (targetEl) {
+      setTimeout(() => {
+        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 150);
     }
   }
 }
 
 // Function to switch between Academic and Examination timetables
 function selectTimetableType(type) {
-  const academicDetails = document.getElementById('academic-tt-details');
-  const examDetails = document.getElementById('exam-tt-details');
-  const btnAcademic = document.getElementById('btn-academic-tt');
-  const btnExam = document.getElementById('btn-exam-tt');
-  const btnAll = document.getElementById('btn-all-tt');
+  const academicDetails = document.getElementById('academic-timetable') || document.getElementById('academic-tt-details');
+  const examDetails = document.getElementById('examination-timetable') || document.getElementById('exam-tt-details');
 
   // Close open dropdowns
-  document.querySelectorAll('.chronicle-dropdown.open').forEach(d => d.classList.remove('open'));
+  document.querySelectorAll('.chronicle-dropdown.open').forEach(d => {
+    d.classList.remove('open');
+    d.querySelector('.chronicle-dropdown-menu')?.classList.remove('show');
+  });
 
-  if (type === 'academic') {
-    if (academicDetails) {
-      academicDetails.open = true;
-      academicDetails.style.display = 'block';
-    }
-    if (examDetails) {
-      examDetails.open = false;
-      examDetails.style.display = 'none';
-    }
-    btnAcademic?.classList.add('active');
-    btnExam?.classList.remove('active');
-    btnAll?.classList.remove('active');
-    setTimeout(() => {
-      academicDetails?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
-  } else if (type === 'exam' || type === 'examination') {
-    if (examDetails) {
-      examDetails.open = true;
-      examDetails.style.display = 'block';
-    }
-    if (academicDetails) {
-      academicDetails.open = false;
-      academicDetails.style.display = 'none';
-    }
-    btnExam?.classList.add('active');
-    btnAcademic?.classList.remove('active');
-    btnAll?.classList.remove('active');
-    setTimeout(() => {
-      examDetails?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
-  } else {
-    // Show all
-    if (academicDetails) {
-      academicDetails.open = true;
-      academicDetails.style.display = 'block';
-    }
-    if (examDetails) {
-      examDetails.open = true;
-      examDetails.style.display = 'block';
-    }
-    btnAll?.classList.add('active');
-    btnAcademic?.classList.remove('active');
-    btnExam?.classList.remove('active');
-  }
-
-  // Update URL history state without reloading
-  if (window.history.replaceState) {
-    const newUrl = new URL(window.location);
-    newUrl.searchParams.set('type', type);
-    window.history.replaceState({}, '', newUrl);
+  if (type === 'academic' && academicDetails) {
+    academicDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  } else if ((type === 'exam' || type === 'examination') && examDetails) {
+    examDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
 

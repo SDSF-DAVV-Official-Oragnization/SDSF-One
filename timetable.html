@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Time Table | SDSF Live</title>
-  <link rel="stylesheet" href="css/style.css?v=placement-gallery-5">
+  <link rel="stylesheet" href="css/style.css?v=2.1">
   <link rel="icon" type="image/png" href="Photoes/departmentlogo_transparent.png">
 </head>
 <body>
@@ -92,10 +92,10 @@
             <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </a>
           <div class="chronicle-dropdown-menu" role="menu">
-            <a href="timetable.html?type=academic" class="chronicle-dropdown-item" role="menuitem" onclick="selectTimetableType('academic'); return false;">
+            <a href="timetable.html?type=academic#academic-timetable" class="chronicle-dropdown-item" role="menuitem" onclick="selectTimetableType('academic'); return false;">
               <span>Academic Time Table</span>
             </a>
-            <a href="timetable.html?type=exam" class="chronicle-dropdown-item" role="menuitem" onclick="selectTimetableType('exam'); return false;">
+            <a href="timetable.html?type=exam#examination-timetable" class="chronicle-dropdown-item" role="menuitem" onclick="selectTimetableType('exam'); return false;">
               <span>Examination Time Table</span>
             </a>
           </div>
@@ -177,172 +177,10 @@
         </div>
       </div>
 
-      <div class="timetable-hero-right">
-        <button type="button" class="btn-admin-login-tt" onclick="openLoginModal()">
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-          Faculty / TT Incharge / Admin Login
-        </button>
-      </div>
     </div>
 
-    <!-- Filter Timetables Section (Image 5 UI) -->
-    <section class="timetable-filter-box" aria-label="Filter Timetables">
-      <div class="filter-box-heading">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd"></path></svg>
-        FILTER TIMETABLES
-      </div>
-
-      <div class="filter-grid-row">
-        <!-- Session -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-session">SESSION</label>
-          <select id="tt-session" class="filter-select">
-            <option value="all">All Sessions</option>
-            <option value="2026-2027" selected>2026-2027</option>
-            <option value="2025-2026">2025-2026</option>
-          </select>
-        </div>
-
-        <!-- Semester -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-semester">SEMESTER</label>
-          <select id="tt-semester" class="filter-select">
-            <option value="all">All Semesters</option>
-            <option value="1">Semester I</option>
-            <option value="2">Semester II</option>
-            <option value="3">Semester III</option>
-            <option value="4">Semester IV</option>
-          </select>
-        </div>
-
-        <!-- Program -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-program">PROGRAM</label>
-          <select id="tt-program" class="filter-select">
-            <option value="all">All Programs</option>
-            <option value="msc_ds">M.Sc. Data Science &amp; Analytics</option>
-            <option value="mtech_ds">M.Tech Data Science &amp; AI</option>
-            <option value="mtech_exec">M.Tech Executive</option>
-            <option value="phd">Ph.D. Data Science</option>
-          </select>
-        </div>
-
-        <!-- Branch -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-branch">BRANCH</label>
-          <select id="tt-branch" class="filter-select">
-            <option value="all">All Branches</option>
-            <option value="ds">Data Science</option>
-            <option value="ai">Artificial Intelligence</option>
-            <option value="bda">Big Data Analytics</option>
-          </select>
-        </div>
-
-        <!-- Year -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-year">YEAR</label>
-          <select id="tt-year" class="filter-select">
-            <option value="all">All</option>
-            <option value="1">1st Year</option>
-            <option value="2">2nd Year</option>
-          </select>
-        </div>
-
-        <!-- Room -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-room">ROOM</label>
-          <select id="tt-room" class="filter-select">
-            <option value="all">All Rooms</option>
-            <option value="LH-1">Lecture Hall 1</option>
-            <option value="LH-2">Lecture Hall 2</option>
-            <option value="R-201">Takshila Room 201</option>
-            <option value="R-202">Takshila Room 202</option>
-          </select>
-        </div>
-
-        <!-- Lab -->
-        <div class="filter-col-item">
-          <label class="filter-label" for="tt-lab">LAB</label>
-          <select id="tt-lab" class="filter-select">
-            <option value="all">All Labs</option>
-            <option value="ai_lab">AI &amp; Deep Learning Lab</option>
-            <option value="analytics_lab">Analytics &amp; Big Data Lab</option>
-            <option value="cloud_lab">High Performance Computing Lab</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- Action Buttons -->
-      <div class="filter-actions-row">
-        <button type="button" class="btn-filter-apply" onclick="applyTimetableFilter()">
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-          Apply
-        </button>
-        <button type="button" class="btn-filter-reset" onclick="resetTimetableFilter()">
-          <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
-          Reset
-        </button>
-        <button type="button" class="btn-class-coord" onclick="showCoordinators()">
-          <svg width="14" height="14" fill="currentColor" viewBox="0 0 20 20"><path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path></svg>
-          Class Coordinators
-        </button>
-      </div>
-    </section>
-
-    <!-- Stats Summary Row (Image 5 UI) -->
-    <div class="timetable-stats-row">
-      <div class="tt-stat-card">
-        <span class="tt-stat-num">0</span>
-        <span class="tt-stat-title">Timetables</span>
-      </div>
-      <div class="tt-stat-card">
-        <span class="tt-stat-num">0</span>
-        <span class="tt-stat-title">Programs</span>
-      </div>
-      <div class="tt-stat-card">
-        <span class="tt-stat-num">0</span>
-        <span class="tt-stat-title">Branches</span>
-      </div>
-    </div>
-
-<!-- ============ Department Time Tables: 2 toggles ============ -->
-<style>
-.tt-toggle, .tt-toggle * { font-family: inherit; }
-.tt-section h3 { font-size: 22px; font-weight: 700; color: #1a1f3c; margin: 22px 0 6px; }
-.tt-semester { margin-top: 32px; }
-.tt-semester h4 { font-size: 19px; font-weight: 700; color: #1a1f3c; margin: 0 0 4px; }
-.tt-info { color: #666; font-size: 15px; margin: 0 0 12px; }
-.tt-wrapper { overflow-x: auto; margin-bottom: 18px; }
-.tt-table { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.3; color: #1a1f3c; }
-.tt-table th { background: #4355d6; color: #fff; font-weight: 700; text-align: left; padding: 16px 16px; border: none; white-space: nowrap; }
-.tt-table td { padding: 13px 16px; border: 1px solid #e3e3e3; text-align: left; background: #fff; }
-.tt-table tbody tr:nth-child(even) td { background: #f7f8fc; }
-.tt-table .tt-sub td { background: #e8ebfa !important; font-weight: 700; }
-.tt-table .tt-break { text-align: center; font-weight: 700; background: #fff7e0 !important; }
-.tt-pdf a { color: #4355d6; font-weight: 700; }
-.tt-toggle { border: none; border-bottom: 1px solid #e3e3e3; margin-bottom: 10px; background: transparent; }
-.tt-toggle > summary { cursor: pointer; font-size: 20px; font-weight: 700; color: #1a1f3c; padding: 14px 4px; }
-.tt-toggle > summary:hover { color: #4355d6; }
-.tt-toggle-body { padding: 0 0 20px; }
-</style>
-    <!-- Quick Timetable Type Switcher -->
-    <div class="tt-type-selector-bar" style="margin: 20px 0 24px;">
-      <button type="button" class="tt-type-btn active" id="btn-academic-tt" onclick="selectTimetableType('academic')">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-        Academic Time Table
-      </button>
-      <button type="button" class="tt-type-btn" id="btn-exam-tt" onclick="selectTimetableType('exam')">
-        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
-        Examination Time Table
-      </button>
-      <button type="button" class="tt-type-btn" id="btn-all-tt" onclick="selectTimetableType('all')">
-        Show Both
-      </button>
-    </div>
-
-<details class="tt-toggle" id="academic-tt-details" open>
-    <summary>Academic Time Table</summary>
-    <div class="tt-toggle-body">
+    <!-- Academic Time Table Section -->
+    <div class="tt-section-wrapper" id="academic-timetable" style="margin-top: 30px;">
 <!-- ============ AI & DS M.Tech (Dual Degree) Time Table ============ -->
 
 <div class="tt-section">
@@ -576,11 +414,10 @@
 </div>
 
     </div>
-</details>
+    <!-- End Academic Time Table Section -->
 
-<details class="tt-toggle" id="exam-tt-details">
-    <summary>Examination Time Table</summary>
-    <div class="tt-toggle-body">
+    <!-- Examination Time Table Section -->
+    <div class="tt-section-wrapper" id="examination-timetable" style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0;">
 
 <div class="tt-section tt-exam">
     <h3>Semester End Examination Time Table</h3>
@@ -797,7 +634,7 @@
 
 </div>
     </div>
-</details>
+    <!-- End Examination Time Table Section -->
 
 
 
@@ -946,6 +783,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=placement-gallery-3"></script>
+  <script src="js/main.js?v=2.1"></script>
 </body>
 </html>

@@ -237,8 +237,9 @@ a {
   border-bottom: 2px solid #1e293b;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+  overflow: visible !important;
 }
 
 .chronicle-navbar-inner {
@@ -249,14 +250,14 @@ a {
   justify-content: space-between;
   padding: 0 24px;
   gap: 16px;
+  overflow: visible !important;
 }
 
 .chronicle-nav-list {
   display: flex;
   align-items: stretch;
   list-style: none;
-  overflow-x: auto;
-  scrollbar-width: none;
+  overflow: visible !important;
   margin: 0;
   padding: 0;
 }
@@ -269,6 +270,8 @@ a {
   display: flex;
   align-items: stretch;
   flex-shrink: 0;
+  position: relative;
+  overflow: visible !important;
 }
 
 .chronicle-nav-link {
@@ -380,7 +383,8 @@ a {
 
 /* Header Dropdown Menu (Themed after Image 2) */
 .chronicle-dropdown {
-  position: relative;
+  position: relative !important;
+  overflow: visible !important;
 }
 
 .chronicle-dropdown-toggle {
@@ -395,6 +399,7 @@ a {
   margin-left: 2px;
   flex-shrink: 0;
   color: #64748b;
+  display: inline-block;
 }
 
 .chronicle-dropdown:hover .dropdown-chevron,
@@ -404,29 +409,27 @@ a {
 }
 
 .chronicle-dropdown-menu {
+  display: none !important;
   position: absolute;
   top: 100%;
   left: 0;
   min-width: 250px;
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16), 0 4px 8px rgba(0, 0, 0, 0.06);
-  padding: 8px 0;
-  z-index: 1000;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px);
-  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-  pointer-events: none;
+  background: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 10px !important;
+  box-shadow: 0 16px 36px rgba(15, 23, 42, 0.22), 0 4px 10px rgba(0, 0, 0, 0.08) !important;
+  padding: 8px 0 !important;
+  z-index: 9999999 !important;
+  margin-top: 0;
 }
 
 .chronicle-dropdown:hover .chronicle-dropdown-menu,
-.chronicle-dropdown.open .chronicle-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
+.chronicle-dropdown.open .chronicle-dropdown-menu,
+.chronicle-dropdown-menu.show {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .chronicle-dropdown-item {
