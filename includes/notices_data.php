@@ -12,7 +12,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '16 Nov 2026',
         'author' => 'Dr. Uma Bhatt (Exam Controller)',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/FinalExaminationTimeTable.pdf',
         'is_featured' => true,
         'description' => 'Detailed schedule for all M.Sc. Data Science & Analytics, M.Tech Data Science & AI Semester end examinations commencing from 28th November 2026.'
     ],
@@ -27,7 +27,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '14 Nov 2026',
         'author' => 'Dr. Preeti Saxena (Ph.D. Coordinator)',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/Ph.D.-Course-Work-Time-Table-2026.pdf',
         'is_featured' => true,
         'description' => 'Weekly lecture plan, research methodology and quantitative techniques coursework slots in Takshila Computer Center.'
     ],
@@ -42,7 +42,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '10 Nov 2026',
         'author' => 'Head of Department, SDSF',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/08-21-2026_0405pm87036.pdf',
         'is_featured' => false,
         'description' => 'Applications are invited for vacant seats against sponsored and merit quota for working professionals and postgraduate aspirants.'
     ],
@@ -102,7 +102,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '20 Oct 2026',
         'author' => 'Office of the Director / HOD',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/Anti-Raggin-Committee-Members-2026.pdf',
         'is_featured' => false,
         'description' => 'Notification of re-constituted Departmental Disciplinary, Gender Sensitization, and Student Welfare committees for AY 2026-27.'
     ],
@@ -117,7 +117,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '24 Aug 2026',
         'author' => 'Dean, Faculty of Engineering Sciences',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/Ph.D.Vivo-Voce-Ms-Priyanka-Gupta.pdf',
         'is_featured' => false,
         'description' => 'Open defense on "Predictive Modeling and Deep Learning Architectures for Multivariate Time Series Forecasting".'
     ],
@@ -147,7 +147,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '12 Aug 2026',
         'author' => 'RAC Committee DAVV',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/RAC-Data-Science-June-2026.pdf',
         'is_featured' => false,
         'description' => 'List of qualified candidates and interview slots for doctoral research admissions in Data Science.'
     ],
@@ -162,7 +162,7 @@ $notices = [
         'term' => 'ODD',
         'date' => '01 Aug 2026',
         'author' => 'Executive Program In-charge',
-        'file_url' => '#',
+        'file_url' => 'notices_pdfs/Second Round Admission of M.Tech. (Data Science) M.Tech. (Data Science) For Working Executive Batch-(2026-2028).pdf',
         'is_featured' => false,
         'description' => 'Schedule for weekend batch classes, orientation program, and LMS portal access credentials.'
     ],
