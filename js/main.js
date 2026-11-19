@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initClock();
   initNoticeData();
   initCategoryFromUrl();
+  initPlacementGallery();
 });
 
 function initCategoryFromUrl() {
@@ -200,4 +201,116 @@ function resetTimetableFilter() {
 
 function showCoordinators() {
   alert('Class Coordinators (SDSF DAVV):\n1. M.Sc. Data Science: Dr. Ajay Kumar\n2. M.Tech AI & Data Science: Dr. Preeti Saxena\n3. M.Tech Executive: Dr. V. B. Gupta\nContact: coordinator-sdsf@dauniv.ac.in');
+}
+
+// Placement poster and campus photo viewer
+function initPlacementGallery() {
+  const viewer = document.getElementById('placementLightbox');
+  if (!viewer) return;
+
+  const title = document.getElementById('placementLightboxTitle');
+  const count = document.getElementById('placementLightboxCount');
+  const image = document.getElementById('placementLightboxImage');
+  const thumbnails = document.getElementById('placementLightboxThumbnails');
+  const previousButton = viewer.querySelector('[data-gallery-prev]');
+  const nextButton = viewer.querySelector('[data-gallery-next]');
+  let galleryItems = [];
+  let activeIndex = 0;
+  let previousFocus = null;
+
+  function renderGallery() {
+    const item = galleryItems[activeIndex];
+    if (!item) return;
+    image.src = item.src;
+    image.alt = item.alt || title.textContent;
+    count.textContent = `${activeIndex + 1} / ${galleryItems.length}`;
+    title.textContent = viewer.dataset.galleryTitle || '';
+    thumbnails.replaceChildren();
+    thumbnails.hidden = galleryItems.length < 2;
+    previousButton.classList.toggle('is-hidden', galleryItems.length < 2);
+    nextButton.classList.toggle('is-hidden', galleryItems.length < 2);
+
+    galleryItems.forEach((galleryItem, index) => {
+      const thumbnail = document.createElement('button');
+      thumbnail.type = 'button';
+      thumbnail.className = 'placement-lightbox-thumbnail';
+      thumbnail.classList.toggle('active', index === activeIndex);
+      thumbnail.setAttribute('aria-label', `View image ${index + 1} of ${galleryItems.length}`);
+      thumbnail.setAttribute('aria-current', index === activeIndex ? 'true' : 'false');
+      const thumbnailImage = document.createElement('img');
+      thumbnailImage.src = galleryItem.src;
+      thumbnailImage.alt = '';
+      thumbnail.appendChild(thumbnailImage);
+      thumbnail.addEventListener('click', () => {
+        activeIndex = index;
+        renderGallery();
+        thumbnails.querySelector('.active')?.focus();
+      });
+      thumbnails.appendChild(thumbnail);
+    });
+    thumbnails.querySelector('.active')?.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  }
+
+  function openGallery(trigger) {
+    previousFocus = trigger;
+    viewer.dataset.galleryTitle = trigger.dataset.galleryTitle || 'Campus Gallery';
+    if (trigger.dataset.galleryScope === 'orange') {
+      const sourceItems = trigger.closest('.placement-story-card')?.querySelectorAll('[data-gallery-item]') || [];
+      galleryItems = Array.from(sourceItems, source => ({
+        src: source.dataset.gallerySrc,
+        alt: source.dataset.galleryAlt || ''
+      }));
+    } else {
+      galleryItems = [{
+        src: trigger.dataset.gallerySrc,
+        alt: trigger.dataset.galleryAlt || viewer.dataset.galleryTitle
+      }];
+    }
+    galleryItems = galleryItems.filter(item => item.src);
+    if (!galleryItems.length) return;
+
+    activeIndex = 0;
+    viewer.hidden = false;
+    viewer.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('placement-gallery-open');
+    renderGallery();
+    viewer.querySelector('[data-gallery-close]:not(.placement-lightbox-backdrop)')?.focus();
+  }
+
+  function closeGallery() {
+    viewer.hidden = true;
+    viewer.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('placement-gallery-open');
+    image.removeAttribute('src');
+    if (document.fullscreenElement === viewer) document.exitFullscreen?.();
+    previousFocus?.focus();
+  }
+
+  function showImage(offset) {
+    if (!galleryItems.length) return;
+    activeIndex = (activeIndex + offset + galleryItems.length) % galleryItems.length;
+    renderGallery();
+  }
+
+  document.addEventListener('click', event => {
+    const openButton = event.target.closest('[data-gallery-open]');
+    if (openButton) {
+      openGallery(openButton);
+      return;
+    }
+    if (event.target.closest('[data-gallery-close]')) closeGallery();
+    if (event.target.closest('[data-gallery-prev]')) showImage(-1);
+    if (event.target.closest('[data-gallery-next]')) showImage(1);
+    if (event.target.closest('[data-gallery-fullscreen]')) {
+      if (document.fullscreenElement) document.exitFullscreen?.();
+      else viewer.requestFullscreen?.();
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (viewer.hidden) return;
+    if (event.key === 'Escape') closeGallery();
+    if (event.key === 'ArrowLeft') showImage(-1);
+    if (event.key === 'ArrowRight') showImage(1);
+  });
 }
