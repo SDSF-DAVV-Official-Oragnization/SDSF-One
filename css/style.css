@@ -1303,6 +1303,65 @@ a {
 /* ==========================================================================
    TIMETABLE & EXAMINATION TABLES (CLEAN, SIMPLE HANDCODED STYLING)
    ========================================================================== */
+.tt-simple-filter-bar {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  padding: 12px 18px;
+  margin: 20px 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.tt-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tt-filter-group label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.tt-filter-select {
+  padding: 6px 12px;
+  font-size: 0.88rem;
+  color: #1e293b;
+  background-color: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  outline: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.tt-filter-select:focus {
+  border-color: #1e293b;
+}
+
+.btn-tt-filter-reset {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-tt-filter-reset:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
 .tt-section-wrapper {
   margin-top: 24px;
   margin-bottom: 40px;

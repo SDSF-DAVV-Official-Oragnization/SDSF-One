@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="css/style.css?v=2.4">
   <link rel="icon" type="image/png" href="Photoes/departmentlogo_transparent.png">
   <style>
+    .tt-simple-filter-bar { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; padding: 12px 18px; margin: 20px 0 24px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .tt-filter-group { display: flex; align-items: center; gap: 8px; }
+    .tt-filter-group label { font-size: 0.88rem; font-weight: 600; color: #1e293b; margin: 0; white-space: nowrap; }
+    .tt-filter-select { padding: 6px 12px; font-size: 0.88rem; color: #1e293b; background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 4px; outline: none; font-family: inherit; cursor: pointer; }
+    .tt-filter-select:focus { border-color: #1e293b; }
+    .btn-tt-filter-reset { background: #f1f5f9; color: #334155; border: 1px solid #cbd5e1; padding: 6px 14px; border-radius: 4px; font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all 0.15s ease; }
+    .btn-tt-filter-reset:hover { background: #e2e8f0; color: #0f172a; }
     .tt-section-wrapper { margin-top: 24px; margin-bottom: 40px; }
     .tt-category-header { border-bottom: 2px solid #1e293b; padding-bottom: 6px; margin-bottom: 20px; }
     .tt-category-header h2 { font-family: inherit; font-size: 1.45rem; font-weight: 700; color: #1e293b; margin: 0; }
@@ -202,6 +209,36 @@
 
     </div>
 
+    <!-- Simple Formal Filter Bar -->
+    <div class="tt-simple-filter-bar">
+      <div class="tt-filter-group">
+        <label for="ttFilterCourse">Course / Program:</label>
+        <select id="ttFilterCourse" class="tt-filter-select" onchange="filterTimetable()">
+          <option value="all">All Courses</option>
+          <option value="aids">M.Tech (Dual Degree) AI &amp; Data Science</option>
+          <option value="mba">MBA (Business Analytics)</option>
+          <option value="msc">M.Sc. (Data Science &amp; Analytics)</option>
+          <option value="ds">M.Tech (DS / BDA)</option>
+        </select>
+      </div>
+
+      <div class="tt-filter-group">
+        <label for="ttFilterSem">Semester:</label>
+        <select id="ttFilterSem" class="tt-filter-select" onchange="filterTimetable()">
+          <option value="all">All Semesters</option>
+          <option value="I">I Semester</option>
+          <option value="III">III Semester</option>
+          <option value="V">V Semester</option>
+          <option value="VII">VII Semester</option>
+          <option value="IX">IX Semester</option>
+        </select>
+      </div>
+
+      <button type="button" class="btn-tt-filter-reset" onclick="resetTimetableFilter()">
+        Reset Filter
+      </button>
+    </div>
+
     <!-- Academic Time Table Section -->
     <div class="tt-section-wrapper" id="academic-timetable">
       <div class="tt-category-header">
@@ -213,7 +250,7 @@
     <h3>M.Tech ( Dual Degree ) Artificial Intelligence and Data Science</h3>
     <p class="tt-pdf"><a href="AIDS%20sem%201-9%20MTECH%20.pdf" target="_blank">Download Time Table (PDF)</a></p>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="I">
         <h4>I Semester</h4>
         <p class="tt-info">Room No.: A-201 &nbsp;|&nbsp; w.e.f. 20/07/2026</p>
         <div class="tt-wrapper">
@@ -254,7 +291,7 @@
         <p><strong>Class Teacher:</strong> Ms. Priya Kushwah (7987841403)</p>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="III">
         <h4>III Semester</h4>
         <p class="tt-info">Room No.: B-002 &nbsp;|&nbsp; w.e.f. 20/07/2026</p>
         <div class="tt-wrapper">
@@ -298,7 +335,7 @@
         </ul>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="V">
         <h4>V Semester</h4>
         <p class="tt-info">Room No.: B-003 &nbsp;|&nbsp; w.e.f. 20/07/2026</p>
         <div class="tt-wrapper">
@@ -342,7 +379,7 @@
         </ul>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="VII">
         <h4>VII Semester</h4>
         <p class="tt-info">Room No.: A-201 &nbsp;|&nbsp; w.e.f. 20/07/2026</p>
         <div class="tt-wrapper">
@@ -389,7 +426,7 @@
         </ul>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="IX">
         <h4>IX Semester</h4>
         <p class="tt-info">Room No.: B-006 &nbsp;|&nbsp; w.e.f. 20/07/2026</p>
         <div class="tt-wrapper">
@@ -453,7 +490,7 @@
     <p class="tt-pdf"><a href="Revised_Timetable_final_examination_of_November_and_December_2026.pdf" target="_blank">Download Revised Time Table - Nov/Dec 2026 (PDF)</a> &nbsp;|&nbsp; <a href="Final_examination_Time_table_of_first_year_December_2026.pdf" target="_blank">Download First Year Time Table - Dec 2026 (PDF)</a></p>
 
     <h3>III, V, VII &amp; IX Semester (Revised) - 25 Nov to 7 Dec 2026</h3>
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="mba" data-sem="III">
         <h4>MBA in Business Analytics - III Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -474,7 +511,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="msc" data-sem="III">
         <h4>M.Sc. (Data Science &amp; Analytics) - III Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -495,7 +532,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="III">
         <h4>M.Tech AI &amp; Data Science - III Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -515,7 +552,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="V">
         <h4>M.Tech AI &amp; Data Science - V Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -535,7 +572,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="VII">
         <h4>M.Tech AI &amp; Data Science - VII Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -555,7 +592,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="IX">
         <h4>M.Tech AI &amp; Data Science - IX Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -576,7 +613,7 @@
     </div>
 
     <h3>I Semester - 8 Dec to 23 Dec 2026</h3>
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="mba" data-sem="I">
         <h4>MBA (Business Analytics) - I Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -598,7 +635,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="msc" data-sem="I">
         <h4>M.Sc. (Data Science &amp; Analytics) - I Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -618,7 +655,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="aids" data-sem="I">
         <h4>M.Tech AI &amp; Data Science - I Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -639,7 +676,7 @@
         </div>
     </div>
 
-    <div class="tt-semester">
+    <div class="tt-semester" data-course="ds" data-sem="I">
         <h4>M.Tech. (DS / BDA) - I Semester</h4>
         <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
         <div class="tt-wrapper">
@@ -813,5 +850,33 @@
   </div>
 
   <script src="js/main.js?v=2.4"></script>
+  <script>
+    function filterTimetable() {
+      var course = document.getElementById('ttFilterCourse') ? document.getElementById('ttFilterCourse').value : 'all';
+      var sem = document.getElementById('ttFilterSem') ? document.getElementById('ttFilterSem').value : 'all';
+      var semBlocks = document.querySelectorAll('.tt-semester');
+      semBlocks.forEach(function(block) {
+        var blockCourse = block.getAttribute('data-course');
+        var blockSem = block.getAttribute('data-sem');
+        var courseMatch = (course === 'all' || blockCourse === course);
+        var semMatch = (sem === 'all' || blockSem === sem);
+        block.style.display = (courseMatch && semMatch) ? '' : 'none';
+      });
+      document.querySelectorAll('.tt-section').forEach(function(section) {
+        var allSemesters = section.querySelectorAll('.tt-semester');
+        if (allSemesters.length > 0) {
+          var visibleSemesters = Array.from(allSemesters).filter(function(s) { return s.style.display !== 'none'; });
+          section.style.display = visibleSemesters.length > 0 ? '' : 'none';
+        }
+      });
+    }
+    function resetTimetableFilter() {
+      var courseSelect = document.getElementById('ttFilterCourse');
+      var semSelect = document.getElementById('ttFilterSem');
+      if (courseSelect) courseSelect.value = 'all';
+      if (semSelect) semSelect.value = 'all';
+      filterTimetable();
+    }
+  </script>
 </body>
 </html>

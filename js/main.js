@@ -103,6 +103,44 @@ function selectTimetableType(type) {
   }
 }
 
+// Simple and formal timetable filter by Course and Semester
+function filterTimetable() {
+  const course = document.getElementById('ttFilterCourse')?.value || 'all';
+  const sem = document.getElementById('ttFilterSem')?.value || 'all';
+
+  const semBlocks = document.querySelectorAll('.tt-semester');
+  semBlocks.forEach(block => {
+    const blockCourse = block.getAttribute('data-course');
+    const blockSem = block.getAttribute('data-sem');
+
+    const courseMatch = (course === 'all' || blockCourse === course);
+    const semMatch = (sem === 'all' || blockSem === sem);
+
+    if (courseMatch && semMatch) {
+      block.style.display = '';
+    } else {
+      block.style.display = 'none';
+    }
+  });
+
+  // Toggle visibility of parent sections if all child semester blocks are filtered out
+  document.querySelectorAll('.tt-section').forEach(section => {
+    const allSemesters = section.querySelectorAll('.tt-semester');
+    if (allSemesters.length > 0) {
+      const visibleSemesters = Array.from(allSemesters).filter(s => s.style.display !== 'none');
+      section.style.display = visibleSemesters.length > 0 ? '' : 'none';
+    }
+  });
+}
+
+function resetTimetableFilter() {
+  const courseSelect = document.getElementById('ttFilterCourse');
+  const semSelect = document.getElementById('ttFilterSem');
+  if (courseSelect) courseSelect.value = 'all';
+  if (semSelect) semSelect.value = 'all';
+  filterTimetable();
+}
+
 function initCategoryFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
   const cat = urlParams.get('category');
