@@ -1223,6 +1223,246 @@ a {
 }
 
 /* ==========================================================================
+   FACULTY PAGE (synced from official SDSF website)
+   ========================================================================== */
+.faculty-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faculty-spotlight-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 14px;
+  padding: 24px 32px;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: center;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.faculty-spotlight-card:hover {
+  box-shadow: 0 12px 32px rgba(15, 28, 56, 0.1);
+  border-color: var(--blue-soft-border);
+}
+
+.spotlight-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 12px 16px;
+  min-height: 250px;
+}
+
+.spotlight-dots {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 90px;
+  height: 90px;
+  background-image: radial-gradient(var(--text-light) 2px, transparent 2px);
+  background-size: 11px 11px;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.spotlight-backdrop {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 105px;
+  height: 155px;
+  background: var(--active-blue-bar);
+  border-radius: 14px;
+  z-index: 1;
+}
+
+.spotlight-photo-frame {
+  position: relative;
+  z-index: 2;
+  width: 175px;
+  height: 228px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+  background: var(--bg-page);
+}
+
+.spotlight-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.spotlight-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.spotlight-eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--crimson-accent);
+  margin-bottom: 6px;
+}
+
+.spotlight-heading {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.spotlight-heading .head-dark { color: var(--primary-navy); }
+.spotlight-heading .head-accent { color: var(--blue-featured); }
+
+.spotlight-message p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.spotlight-message p:last-child { margin-bottom: 0; }
+
+.spotlight-footer {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+
+.spotlight-footer .faculty-name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 2px;
+}
+
+.spotlight-footer .faculty-role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.faculty-contact-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  color: #475569;
+}
+
+.contact-entry {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-entry svg {
+  width: 14px;
+  height: 14px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.contact-entry a {
+  color: var(--blue-featured);
+  text-decoration: none;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.contact-entry a:hover { text-decoration: underline; }
+.contact-divider { color: var(--border-medium); }
+
+/* Non-Teaching / Visiting / Documents */
+.faculty-resource-block { margin-top: 32px; }
+
+.faculty-resource-heading {
+  background: var(--primary-navy);
+  border-left: 5px solid var(--crimson-accent);
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 12px;
+}
+
+.faculty-resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.faculty-resource-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: var(--bg-page);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  color: var(--text-main);
+  font-size: 0.92rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.faculty-resource-item:hover {
+  background: #ffffff;
+  border-color: var(--blue-featured);
+  color: var(--blue-featured);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.faculty-resource-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--crimson-accent);
+  flex-shrink: 0;
+}
+
+@media (max-width: 900px) {
+  .faculty-spotlight-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 22px 20px;
+  }
+  .spotlight-visual { min-height: auto; }
+}
+
+@media (max-width: 576px) {
+  .content-placeholder-card { padding: 24px 16px; }
+  .faculty-spotlight-card { text-align: center; padding: 18px 14px; }
+  .spotlight-photo-frame { width: 150px; height: 195px; }
+  .spotlight-backdrop { width: 90px; height: 130px; }
+  .spotlight-dots { width: 70px; height: 70px; }
+  .spotlight-heading { font-size: 1.3rem; }
+  .faculty-contact-row { flex-direction: column; gap: 6px; }
+  .contact-divider { display: none; }
+}
+
+/* ==========================================================================
    FOOTER (Image 4 UI)
    ========================================================================== */
 .site-footer {
