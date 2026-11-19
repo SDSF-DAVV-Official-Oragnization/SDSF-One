@@ -305,21 +305,30 @@
       </div>
     </div>
 
-  <!-- ============ AI & DS M.Tech (Dual Degree) Time Table ============ -->
+<!-- ============ Department Time Tables: 2 toggles ============ -->
 <style>
-    .tt-section h3 { font-size: 20px; font-weight: bold; color: #1a1f3c; margin-bottom: 5px; }
-    .tt-semester { margin-top: 30px; }
-    .tt-semester h4 { font-size: 17px; font-weight: bold; color: #1a1f3c; margin-bottom: 4px; }
-    .tt-info { color: #666; font-size: 14px; margin-bottom: 10px; }
-    .tt-wrapper { overflow-x: auto; margin-bottom: 15px; }
-    .tt-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    .tt-table th { background: #4355d6; color: #fff; text-align: left; padding: 10px 12px; border: 1px solid #4355d6; white-space: nowrap; }
-    .tt-table td { padding: 9px 12px; border: 1px solid #e3e3e3; }
-    .tt-table tbody tr:nth-child(even) { background: #f7f8fc; }
-    .tt-table .tt-sub td { background: #e8ebfa; font-weight: bold; }
-    .tt-table .tt-break { text-align: center; font-weight: bold; background: #fff7e0; }
-    .tt-pdf a { color: #4355d6; font-weight: bold; }
+.tt-toggle, .tt-toggle * { font-family: inherit; }
+.tt-section h3 { font-size: 22px; font-weight: 700; color: #1a1f3c; margin: 22px 0 6px; }
+.tt-semester { margin-top: 32px; }
+.tt-semester h4 { font-size: 19px; font-weight: 700; color: #1a1f3c; margin: 0 0 4px; }
+.tt-info { color: #666; font-size: 15px; margin: 0 0 12px; }
+.tt-wrapper { overflow-x: auto; margin-bottom: 18px; }
+.tt-table { width: 100%; border-collapse: collapse; font-size: 17px; line-height: 1.3; color: #1a1f3c; }
+.tt-table th { background: #4355d6; color: #fff; font-weight: 700; text-align: left; padding: 16px 16px; border: none; white-space: nowrap; }
+.tt-table td { padding: 13px 16px; border: 1px solid #e3e3e3; text-align: left; background: #fff; }
+.tt-table tbody tr:nth-child(even) td { background: #f7f8fc; }
+.tt-table .tt-sub td { background: #e8ebfa !important; font-weight: 700; }
+.tt-table .tt-break { text-align: center; font-weight: 700; background: #fff7e0 !important; }
+.tt-pdf a { color: #4355d6; font-weight: 700; }
+.tt-toggle { border: none; border-bottom: 1px solid #e3e3e3; margin-bottom: 10px; background: transparent; }
+.tt-toggle > summary { cursor: pointer; font-size: 20px; font-weight: 700; color: #1a1f3c; padding: 14px 4px; }
+.tt-toggle > summary:hover { color: #4355d6; }
+.tt-toggle-body { padding: 0 0 20px; }
 </style>
+<details class="tt-toggle" open>
+    <summary>Academic Time Table</summary>
+    <div class="tt-toggle-body">
+<!-- ============ AI & DS M.Tech (Dual Degree) Time Table ============ -->
 
 <div class="tt-section">
     <h3>M.Tech ( Dual Degree ) Artificial Intelligence and Data Science</h3>
@@ -331,167 +340,34 @@
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>9:00-10:00</th>
-                        <th>10:00-11:00</th>
-                        <th>11:00-11:30</th>
-                        <th>11:30-12:30</th>
-                        <th>12:30-1:30</th>
-                        <th>1:30-2:00</th>
-                        <th>2:00-3:00</th>
-                        <th>3:00-4:00</th>
-                    </tr>
+                    <tr><th>Day</th><th>9:00-10:00</th><th>10:00-11:00</th><th>11:00-11:30</th><th>11:30-12:30</th><th>12:30-1:30</th><th>1:30-2:00</th><th>2:00-3:00</th><th>3:00-4:00</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>DS6A-107</td>
-                        <td>DS6A-105</td>
-                        <td></td>
-                        <td>DS6A-106</td>
-                        <td>DS6A-101</td>
-                        <td></td>
-                        <td>DS6A-102</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>DS6A-107</td>
-                        <td>DS6A-105</td>
-                        <td></td>
-                        <td>DS6A-106</td>
-                        <td>DS6A-101</td>
-                        <td></td>
-                        <td>DS6A-103</td>
-                        <td>DS6A-103</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>DS6A-104</td>
-                        <td>DS6A-105</td>
-                        <td></td>
-                        <td>DS6A-106</td>
-                        <td>DS6A-101</td>
-                        <td></td>
-                        <td>DS6A-102</td>
-                        <td>DS6A-102</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>DS6A-104</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>DS6A-101</td>
-                        <td></td>
-                        <td>DS6A-102(Lab)</td>
-                        <td>DS6A-102(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>DS6A-107(Lab)</td>
-                        <td>DS6A-107(Lab)</td>
-                        <td></td>
-                        <td>DS6A-103</td>
-                        <td>DS6A-103</td>
-                        <td></td>
-                        <td>DS6A-104(Lab)</td>
-                        <td>DS6A-104(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>Monday</td><td>DS6A-107</td><td>DS6A-105</td><td></td><td>DS6A-106</td><td>DS6A-101</td><td></td><td>DS6A-102</td><td></td></tr>
+                    <tr><td>Tuesday</td><td>DS6A-107</td><td>DS6A-105</td><td></td><td>DS6A-106</td><td>DS6A-101</td><td></td><td>DS6A-103</td><td>DS6A-103</td></tr>
+                    <tr><td>Wednesday</td><td>DS6A-104</td><td>DS6A-105</td><td></td><td>DS6A-106</td><td>DS6A-101</td><td></td><td>DS6A-102</td><td>DS6A-102</td></tr>
+                    <tr><td>Thursday</td><td>DS6A-104</td><td></td><td></td><td></td><td>DS6A-101</td><td></td><td>DS6A-102(Lab)</td><td>DS6A-102(Lab)</td></tr>
+                    <tr><td>Friday</td><td>DS6A-107(Lab)</td><td>DS6A-107(Lab)</td><td></td><td>DS6A-103</td><td>DS6A-103</td><td></td><td>DS6A-104(Lab)</td><td>DS6A-104(Lab)</td></tr>
+                    <tr><td>Saturday</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Title</th>
-                        <th>Credits (L-T-P)</th>
-                        <th>Faculty</th>
-                        <th>Contact No.</th>
-                        <th>Email</th>
-                    </tr>
+                    <tr><th>Code</th><th>Title</th><th>Credits (L-T-P)</th><th>Faculty</th><th>Contact No.</th><th>Email</th></tr>
                 </thead>
                 <tbody>
                     <tr class="tt-sub"><td colspan="6">CORE COURSES</td></tr>
-                    <tr>
-                        <td>DS6A-101</td>
-                        <td>Mathematics-I</td>
-                        <td>4 (3-1-0)</td>
-                        <td>Dr. Anupam Jain</td>
-                        <td>9589883822</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-102</td>
-                        <td>Physics</td>
-                        <td>4 (2-1-2)</td>
-                        <td>Kabir Beg Mirja</td>
-                        <td>9669111801</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-103</td>
-                        <td>Descriptive Statistics & Probability Theory</td>
-                        <td>4 (3-1-0)</td>
-                        <td>Kapil Sharma</td>
-                        <td>8871463595</td>
-                        <td>kapilsikhwal@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-104</td>
-                        <td>Fundamentals of Programming</td>
-                        <td>3 (1-1-2)</td>
-                        <td>Ms. Minal Agrawal</td>
-                        <td>7024130300</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-105</td>
-                        <td>Introduction to Computer Science</td>
-                        <td>3 (2-1-0)</td>
-                        <td>Mr. Rajat Yadav</td>
-                        <td>9826705696</td>
-                        <td>rajatyadav25009@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-106</td>
-                        <td>Environmental Science</td>
-                        <td>3 (2-1-0)</td>
-                        <td>Ms. Priya Kushwah</td>
-                        <td>7987841403</td>
-                        <td>kushwahpriya53@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-107</td>
-                        <td>Fundamentals of Electronics</td>
-                        <td>3 (1-1-2)</td>
-                        <td>Mr. Animesh Masih</td>
-                        <td></td>
-                        <td>animesh.masih1976@gmail.com</td>
-                    </tr>
+                    <tr><td>DS6A-101</td><td>Mathematics-I</td><td>4 (3-1-0)</td><td>Dr. Anupam Jain</td><td>9589883822</td><td></td></tr>
+                    <tr><td>DS6A-102</td><td>Physics</td><td>4 (2-1-2)</td><td>Kabir Beg Mirja</td><td>9669111801</td><td></td></tr>
+                    <tr><td>DS6A-103</td><td>Descriptive Statistics & Probability Theory</td><td>4 (3-1-0)</td><td>Kapil Sharma</td><td>8871463595</td><td>kapilsikhwal@gmail.com</td></tr>
+                    <tr><td>DS6A-104</td><td>Fundamentals of Programming</td><td>3 (1-1-2)</td><td>Ms. Minal Agrawal</td><td>7024130300</td><td></td></tr>
+                    <tr><td>DS6A-105</td><td>Introduction to Computer Science</td><td>3 (2-1-0)</td><td>Mr. Rajat Yadav</td><td>9826705696</td><td>rajatyadav25009@gmail.com</td></tr>
+                    <tr><td>DS6A-106</td><td>Environmental Science</td><td>3 (2-1-0)</td><td>Ms. Priya Kushwah</td><td>7987841403</td><td>kushwahpriya53@gmail.com</td></tr>
+                    <tr><td>DS6A-107</td><td>Fundamentals of Electronics</td><td>3 (1-1-2)</td><td>Mr. Animesh Masih</td><td></td><td>animesh.masih1976@gmail.com</td></tr>
                     <tr class="tt-sub"><td colspan="6">COMPREHENSIVE VIVA-VOCE</td></tr>
-                    <tr>
-                        <td></td>
-                        <td>Comprehensive Viva-Voce</td>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td></td><td>Comprehensive Viva-Voce</td><td>4</td><td></td><td></td><td></td></tr>
                     <tr class="tt-sub"><td colspan="2">Total Credits</td><td colspan="4">28</td></tr>
                 </tbody>
             </table>
@@ -505,138 +381,32 @@
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>9:00-10:00</th>
-                        <th>10:00-11:00</th>
-                        <th>11:00-12:00</th>
-                        <th>12:00-1:00</th>
-                        <th>1:00-2:00</th>
-                        <th>2:00-3:00</th>
-                        <th>3:00-4:00</th>
-                    </tr>
+                    <tr><th>Day</th><th>9:00-10:00</th><th>10:00-11:00</th><th>11:00-12:00</th><th>12:00-1:00</th><th>1:00-2:00</th><th>2:00-3:00</th><th>3:00-4:00</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>DS6A-203</td>
-                        <td>DS6A-206</td>
-                        <td>DS6A-202</td>
-                        <td rowspan="5" class="tt-break">BREAK</td>
-                        <td>DS6A-205</td>
-                        <td>DS6A-204(Lab)</td>
-                        <td>DS6A-204(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>DS6A-203</td>
-                        <td>DS6A-206</td>
-                        <td>DS6A-202</td>
-                        <td>DS6A-205</td>
-                        <td>DS6A-202</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>DS6A-203</td>
-                        <td></td>
-                        <td>DS6A-202</td>
-                        <td>DS6A-205</td>
-                        <td>DS6A-204</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>DS6A-201</td>
-                        <td>DS6A-201(Lab)</td>
-                        <td>DS6A-201(Lab)</td>
-                        <td>DS6A-204</td>
-                        <td>DS6A-204</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>DS6A-201</td>
-                        <td>DS6A-201</td>
-                        <td>DS6A-206</td>
-                        <td>DS6A-206(Lab)</td>
-                        <td>DS6A-206(Lab)</td>
-                        <td></td>
-                    </tr>
+                    <tr><td>Monday</td><td>DS6A-203</td><td>DS6A-206</td><td>DS6A-202</td><td rowspan="5" class="tt-break">BREAK</td><td>DS6A-205</td><td>DS6A-204(Lab)</td><td>DS6A-204(Lab)</td></tr>
+                    <tr><td>Tuesday</td><td>DS6A-203</td><td>DS6A-206</td><td>DS6A-202</td><td>DS6A-205</td><td>DS6A-202</td><td></td></tr>
+                    <tr><td>Wednesday</td><td>DS6A-203</td><td></td><td>DS6A-202</td><td>DS6A-205</td><td>DS6A-204</td><td></td></tr>
+                    <tr><td>Thursday</td><td>DS6A-201</td><td>DS6A-201(Lab)</td><td>DS6A-201(Lab)</td><td>DS6A-204</td><td>DS6A-204</td><td></td></tr>
+                    <tr><td>Friday</td><td>DS6A-201</td><td>DS6A-201</td><td>DS6A-206</td><td>DS6A-206(Lab)</td><td>DS6A-206(Lab)</td><td></td></tr>
                 </tbody>
             </table>
         </div>
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Title</th>
-                        <th>Credits (L-T-P)</th>
-                        <th>Faculty</th>
-                        <th>Contact No.</th>
-                        <th>Email</th>
-                    </tr>
+                    <tr><th>Code</th><th>Title</th><th>Credits (L-T-P)</th><th>Faculty</th><th>Contact No.</th><th>Email</th></tr>
                 </thead>
                 <tbody>
                     <tr class="tt-sub"><td colspan="6">CORE COURSES</td></tr>
-                    <tr>
-                        <td>DS6A-201</td>
-                        <td>Design and Analysis of Algorithm</td>
-                        <td>4 (3-0-2)</td>
-                        <td>Ms. Ritika Verma</td>
-                        <td>9399064826</td>
-                        <td>ritikaverma2101@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-202</td>
-                        <td>Probability Distributions</td>
-                        <td>4 (4-0-0)</td>
-                        <td>Simran Prajapati</td>
-                        <td>9713603972</td>
-                        <td>prajapatisimr@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-203</td>
-                        <td>Computer Architecture</td>
-                        <td>3 (2-1-0)</td>
-                        <td>Ms. Alfia Bagwala</td>
-                        <td>98278 07831</td>
-                        <td>alfianaseem@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-204</td>
-                        <td>Numerical Methods / Engineering Economics</td>
-                        <td>3 (3-0-2)</td>
-                        <td>Ms. Pallavi Pandey</td>
-                        <td>6263852053</td>
-                        <td>pandeypallavi505@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-205</td>
-                        <td>Communication Skills</td>
-                        <td>3 (3-0-0)</td>
-                        <td>Dr. Meenu Kumar</td>
-                        <td>9630272025</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-206</td>
-                        <td>Object Oriented Programming</td>
-                        <td>4 (3-0-2)</td>
-                        <td>Ms. Khushi Patidar</td>
-                        <td>9343398724</td>
-                        <td>khushipatidar293@gmail.com</td>
-                    </tr>
+                    <tr><td>DS6A-201</td><td>Design and Analysis of Algorithm</td><td>4 (3-0-2)</td><td>Ms. Ritika Verma</td><td>9399064826</td><td>ritikaverma2101@gmail.com</td></tr>
+                    <tr><td>DS6A-202</td><td>Probability Distributions</td><td>4 (4-0-0)</td><td>Simran Prajapati</td><td>9713603972</td><td>prajapatisimr@gmail.com</td></tr>
+                    <tr><td>DS6A-203</td><td>Computer Architecture</td><td>3 (2-1-0)</td><td>Ms. Alfia Bagwala</td><td>98278 07831</td><td>alfianaseem@gmail.com</td></tr>
+                    <tr><td>DS6A-204</td><td>Numerical Methods / Engineering Economics</td><td>3 (3-0-2)</td><td>Ms. Pallavi Pandey</td><td>6263852053</td><td>pandeypallavi505@gmail.com</td></tr>
+                    <tr><td>DS6A-205</td><td>Communication Skills</td><td>3 (3-0-0)</td><td>Dr. Meenu Kumar</td><td>9630272025</td><td></td></tr>
+                    <tr><td>DS6A-206</td><td>Object Oriented Programming</td><td>4 (3-0-2)</td><td>Ms. Khushi Patidar</td><td>9343398724</td><td>khushipatidar293@gmail.com</td></tr>
                     <tr class="tt-sub"><td colspan="6">COMPREHENSIVE VIVA-VOCE</td></tr>
-                    <tr>
-                        <td></td>
-                        <td>Comprehensive Viva-Voce</td>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td></td><td>Comprehensive Viva-Voce</td><td>4</td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
@@ -655,145 +425,33 @@
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>9:00-10:00</th>
-                        <th>10:00-11:00</th>
-                        <th>11:00-12:00</th>
-                        <th>12:00-12:30</th>
-                        <th>12:30-1:30</th>
-                        <th>1:30-2:30</th>
-                        <th>2:30-3:30</th>
-                        <th>3:30-4:30</th>
-                    </tr>
+                    <tr><th>Day</th><th>9:00-10:00</th><th>10:00-11:00</th><th>11:00-12:00</th><th>12:00-12:30</th><th>12:30-1:30</th><th>1:30-2:30</th><th>2:30-3:30</th><th>3:30-4:30</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>DS6A-306(Lab)</td>
-                        <td>DS6A-306(Lab)</td>
-                        <td>DS6A-305</td>
-                        <td rowspan="5" class="tt-break">LUNCH</td>
-                        <td></td>
-                        <td>DS6A-305</td>
-                        <td>DS6A-301</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>DS6A-306</td>
-                        <td>DS6A-306</td>
-                        <td>DS6A-305</td>
-                        <td>DS6A-303</td>
-                        <td>DS6A-301</td>
-                        <td>DS6A-303(Lab)</td>
-                        <td>DS6A-303(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>DS6A-302</td>
-                        <td>DS6A-304</td>
-                        <td>DS6A-305</td>
-                        <td></td>
-                        <td>DS6A-301(Lab)</td>
-                        <td>DS6A-301(Lab)</td>
-                        <td>DS6A-303</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>DS6A-302</td>
-                        <td>DS6A-304</td>
-                        <td>DS6A-306</td>
-                        <td>DS6A-304</td>
-                        <td></td>
-                        <td></td>
-                        <td>DS6A-303</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>DS6A-302(Lab)</td>
-                        <td>DS6A-302(Lab)</td>
-                        <td>DS6A-302</td>
-                        <td>DS6A-304</td>
-                        <td></td>
-                        <td>DS6A-301</td>
-                        <td></td>
-                    </tr>
+                    <tr><td>Monday</td><td>DS6A-306(Lab)</td><td>DS6A-306(Lab)</td><td>DS6A-305</td><td rowspan="5" class="tt-break">LUNCH</td><td></td><td>DS6A-305</td><td>DS6A-301</td><td></td></tr>
+                    <tr><td>Tuesday</td><td>DS6A-306</td><td>DS6A-306</td><td>DS6A-305</td><td>DS6A-303</td><td>DS6A-301</td><td>DS6A-303(Lab)</td><td>DS6A-303(Lab)</td></tr>
+                    <tr><td>Wednesday</td><td>DS6A-302</td><td>DS6A-304</td><td>DS6A-305</td><td></td><td>DS6A-301(Lab)</td><td>DS6A-301(Lab)</td><td>DS6A-303</td></tr>
+                    <tr><td>Thursday</td><td>DS6A-302</td><td>DS6A-304</td><td>DS6A-306</td><td>DS6A-304</td><td></td><td></td><td>DS6A-303</td></tr>
+                    <tr><td>Friday</td><td>DS6A-302(Lab)</td><td>DS6A-302(Lab)</td><td>DS6A-302</td><td>DS6A-304</td><td></td><td>DS6A-301</td><td></td></tr>
                 </tbody>
             </table>
         </div>
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Title</th>
-                        <th>Credits (L-T-P)</th>
-                        <th>Faculty</th>
-                        <th>Contact No.</th>
-                        <th>Email</th>
-                    </tr>
+                    <tr><th>Code</th><th>Title</th><th>Credits (L-T-P)</th><th>Faculty</th><th>Contact No.</th><th>Email</th></tr>
                 </thead>
                 <tbody>
                     <tr class="tt-sub"><td colspan="6">CORE COURSES</td></tr>
-                    <tr>
-                        <td>DS6A-301</td>
-                        <td>Datamining and Data Warehouse</td>
-                        <td>4 (3-0-2)</td>
-                        <td>Mr. Rajat Yadav</td>
-                        <td>9826705696</td>
-                        <td>rajatyadav25009@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-302</td>
-                        <td>Java Programming</td>
-                        <td>4 (3-0-2)</td>
-                        <td>Mr. Amit Nashikkar</td>
-                        <td>9826550874</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-303</td>
-                        <td>Data Engineering</td>
-                        <td>4 (3-1-2)</td>
-                        <td>Mr. Ayan Shah</td>
-                        <td>8889873684</td>
-                        <td>shahayan73684@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-304</td>
-                        <td>Statistical Inference</td>
-                        <td>4 (3-1-0)</td>
-                        <td>Dr. Priyanka Malviya</td>
-                        <td>94248 78532</td>
-                        <td>sarsodiapriyanka@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-305</td>
-                        <td>Soft Computing</td>
-                        <td>4 (3-1-0)</td>
-                        <td>Dr. Shishir Kumar Shandilya</td>
-                        <td>9009972032</td>
-                        <td>shishir.davv@gmail.com</td>
-                    </tr>
+                    <tr><td>DS6A-301</td><td>Datamining and Data Warehouse</td><td>4 (3-0-2)</td><td>Mr. Rajat Yadav</td><td>9826705696</td><td>rajatyadav25009@gmail.com</td></tr>
+                    <tr><td>DS6A-302</td><td>Java Programming</td><td>4 (3-0-2)</td><td>Mr. Amit Nashikkar</td><td>9826550874</td><td></td></tr>
+                    <tr><td>DS6A-303</td><td>Data Engineering</td><td>4 (3-1-2)</td><td>Mr. Ayan Shah</td><td>8889873684</td><td>shahayan73684@gmail.com</td></tr>
+                    <tr><td>DS6A-304</td><td>Statistical Inference</td><td>4 (3-1-0)</td><td>Dr. Priyanka Malviya</td><td>94248 78532</td><td>sarsodiapriyanka@gmail.com</td></tr>
+                    <tr><td>DS6A-305</td><td>Soft Computing</td><td>4 (3-1-0)</td><td>Dr. Shishir Kumar Shandilya</td><td>9009972032</td><td>shishir.davv@gmail.com</td></tr>
                     <tr class="tt-sub"><td colspan="6">ELECTIVE COURSES (ANY ONE)</td></tr>
-                    <tr>
-                        <td>DS6A-306</td>
-                        <td>Computer Networks</td>
-                        <td>4 (3-0-2)</td>
-                        <td>Mr. Surya Pratap</td>
-                        <td>8889115933</td>
-                        <td>palsurya15@gmail.com</td>
-                    </tr>
+                    <tr><td>DS6A-306</td><td>Computer Networks</td><td>4 (3-0-2)</td><td>Mr. Surya Pratap</td><td>8889115933</td><td>palsurya15@gmail.com</td></tr>
                     <tr class="tt-sub"><td colspan="6">COMPREHENSIVE VIVA-VOCE</td></tr>
-                    <tr>
-                        <td>DS6A-252</td>
-                        <td>Comprehensive Viva-Voce</td>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>DS6A-252</td><td>Comprehensive Viva-Voce</td><td>4</td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
@@ -811,149 +469,35 @@
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>9:00-10:00</th>
-                        <th>10:00-11:00</th>
-                        <th>11:00-12:00</th>
-                        <th>12:00-12:30</th>
-                        <th>12:30-1:30</th>
-                        <th>1:30-2:30</th>
-                    </tr>
+                    <tr><th>Day</th><th>9:00-10:00</th><th>10:00-11:00</th><th>11:00-12:00</th><th>12:00-12:30</th><th>12:30-1:30</th><th>1:30-2:30</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>DS6A-404 : HR</td>
-                        <td>DS6A-404 : HR</td>
-                        <td>DS6A-401 : KP</td>
-                        <td rowspan="6" class="tt-break">Break</td>
-                        <td>DS6A-405 : SKS</td>
-                        <td>DS6A-403 : GA</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>DS6A-404 : HR</td>
-                        <td>DS6A-404 : HR</td>
-                        <td>DS6A-401 : KP</td>
-                        <td>DS6A-405 : SKS</td>
-                        <td>DS6A-406 : NB</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>DS6A-406 : NB</td>
-                        <td>DS6A-401 : KP(Lab)</td>
-                        <td>DS6A-401 : KP(Lab)</td>
-                        <td>DS6A-405 : SKS</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>DS6A-406 : NB</td>
-                        <td>DS6A-406 : NB</td>
-                        <td>DS6A-401 : KP</td>
-                        <td>DS6A-403 : GA</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td>DS6A-406 : NB(Lab)</td>
-                        <td>DS6A-406 : NB(Lab)</td>
-                        <td>DS6A-403 : GA</td>
-                        <td>DS6A-403 : GA(Lab)</td>
-                        <td>DS6A-403 : GA(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>Monday</td><td>DS6A-404 : HR</td><td>DS6A-404 : HR</td><td>DS6A-401 : KP</td><td rowspan="6" class="tt-break">Break</td><td>DS6A-405 : SKS</td><td>DS6A-403 : GA</td></tr>
+                    <tr><td>Tuesday</td><td>DS6A-404 : HR</td><td>DS6A-404 : HR</td><td>DS6A-401 : KP</td><td>DS6A-405 : SKS</td><td>DS6A-406 : NB</td></tr>
+                    <tr><td>Wednesday</td><td>DS6A-406 : NB</td><td>DS6A-401 : KP(Lab)</td><td>DS6A-401 : KP(Lab)</td><td>DS6A-405 : SKS</td><td></td></tr>
+                    <tr><td>Thursday</td><td>DS6A-406 : NB</td><td>DS6A-406 : NB</td><td>DS6A-401 : KP</td><td>DS6A-403 : GA</td><td></td></tr>
+                    <tr><td>Friday</td><td>DS6A-406 : NB(Lab)</td><td>DS6A-406 : NB(Lab)</td><td>DS6A-403 : GA</td><td>DS6A-403 : GA(Lab)</td><td>DS6A-403 : GA(Lab)</td></tr>
+                    <tr><td>Saturday</td><td></td><td></td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Title</th>
-                        <th>Credits (L-T-P)</th>
-                        <th>Faculty</th>
-                        <th>Contact No.</th>
-                        <th>Email</th>
-                    </tr>
+                    <tr><th>Code</th><th>Title</th><th>Credits (L-T-P)</th><th>Faculty</th><th>Contact No.</th><th>Email</th></tr>
                 </thead>
                 <tbody>
                     <tr class="tt-sub"><td colspan="6">CORE COURSES</td></tr>
-                    <tr>
-                        <td>DS6A-401</td>
-                        <td>Data Visualization</td>
-                        <td>4 (3-0-2)</td>
-                        <td>KP : Ms. Khushi Patidar</td>
-                        <td>9343398724</td>
-                        <td>khushipatidar293@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-402</td>
-                        <td>Big Data Computing</td>
-                        <td>4 (4-0-0)</td>
-                        <td>NPTEL</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-403</td>
-                        <td>Cloud Computing</td>
-                        <td>4 (3-0-2)</td>
-                        <td>GA : Ms. Garima Agrawal</td>
-                        <td>8989516924</td>
-                        <td>agrawal.garima1996@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-404</td>
-                        <td>Forecasting Methods</td>
-                        <td>4 (3-1-0)</td>
-                        <td>HR : Dr. Harsh Ramgir</td>
-                        <td>9826048885</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-406</td>
-                        <td>Machine Learning Using Python</td>
-                        <td>4 (3-0-2)</td>
-                        <td>NB : Mr. Nandkishor Buwade</td>
-                        <td>9165841223</td>
-                        <td>Nandkishorbuwade@gmail.com</td>
-                    </tr>
+                    <tr><td>DS6A-401</td><td>Data Visualization</td><td>4 (3-0-2)</td><td>KP : Ms. Khushi Patidar</td><td>9343398724</td><td>khushipatidar293@gmail.com</td></tr>
+                    <tr><td>DS6A-402</td><td>Big Data Computing</td><td>4 (4-0-0)</td><td>NPTEL</td><td></td><td></td></tr>
+                    <tr><td>DS6A-403</td><td>Cloud Computing</td><td>4 (3-0-2)</td><td>GA : Ms. Garima Agrawal</td><td>8989516924</td><td>agrawal.garima1996@gmail.com</td></tr>
+                    <tr><td>DS6A-404</td><td>Forecasting Methods</td><td>4 (3-1-0)</td><td>HR : Dr. Harsh Ramgir</td><td>9826048885</td><td></td></tr>
+                    <tr><td>DS6A-406</td><td>Machine Learning Using Python</td><td>4 (3-0-2)</td><td>NB : Mr. Nandkishor Buwade</td><td>9165841223</td><td>Nandkishorbuwade@gmail.com</td></tr>
                     <tr class="tt-sub"><td colspan="6">ELECTIVE COURSES (ANY ONE)</td></tr>
-                    <tr>
-                        <td>DS6A-405</td>
-                        <td>Cryptography</td>
-                        <td>3 (3-0-0)</td>
-                        <td>SKS : Dr. Shishir Kumar Shandilya</td>
-                        <td>9009972032</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>Text Image Analytics</td>
-                        <td></td>
-                        <td>Not Opted</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>DS6A-405</td><td>Cryptography</td><td>3 (3-0-0)</td><td>SKS : Dr. Shishir Kumar Shandilya</td><td>9009972032</td><td></td></tr>
+                    <tr><td></td><td>Text Image Analytics</td><td></td><td>Not Opted</td><td></td><td></td></tr>
                     <tr class="tt-sub"><td colspan="6">COMPREHENSIVE VIVA-VOCE</td></tr>
-                    <tr>
-                        <td></td>
-                        <td>Comprehensive Viva-Voce</td>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td></td><td>Comprehensive Viva-Voce</td><td>4</td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
@@ -972,154 +516,35 @@
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Day</th>
-                        <th>10:00-11:00</th>
-                        <th>11:00-12:00</th>
-                        <th>12:00-1:00</th>
-                        <th>1:30-2:30</th>
-                        <th>2:30-3:30</th>
-                    </tr>
+                    <tr><th>Day</th><th>10:00-11:00</th><th>11:00-12:00</th><th>12:00-1:00</th><th>1:30-2:30</th><th>2:30-3:30</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Monday</td>
-                        <td>DS6A-501 AB(Lab)</td>
-                        <td>DS6A-501 AB(Lab)</td>
-                        <td>DS6A-503 GA</td>
-                        <td>DS6A-509 JK(Lab)</td>
-                        <td>DS6A-509 JK(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Tuesday</td>
-                        <td>DS6A-511</td>
-                        <td>DS6A-501 AB</td>
-                        <td>DS6A-511</td>
-                        <td>DS6A-507 SKS</td>
-                        <td>DS6A-509 JK</td>
-                    </tr>
-                    <tr>
-                        <td>Wednesday</td>
-                        <td>DS6A-511</td>
-                        <td>DS6A-501 AB</td>
-                        <td>DS6A-503 GA</td>
-                        <td>DS6A-507 SKS</td>
-                        <td>DS6A-503 GA</td>
-                    </tr>
-                    <tr>
-                        <td>Thursday</td>
-                        <td>DS6A-511</td>
-                        <td>DS6A-507 SKS</td>
-                        <td>DS6A-501 AB</td>
-                        <td>DS6A-503 GA(Lab)</td>
-                        <td>DS6A-503 GA(Lab)</td>
-                    </tr>
-                    <tr>
-                        <td>Friday</td>
-                        <td></td>
-                        <td>DS6A-507 SKS(Lab)</td>
-                        <td>DS6A-507 SKS(Lab)</td>
-                        <td>DS6A-509 JK</td>
-                        <td>DS6A-509 JK</td>
-                    </tr>
-                    <tr>
-                        <td>Saturday</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>Sunday</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>Monday</td><td>DS6A-501 AB(Lab)</td><td>DS6A-501 AB(Lab)</td><td>DS6A-503 GA</td><td>DS6A-509 JK(Lab)</td><td>DS6A-509 JK(Lab)</td></tr>
+                    <tr><td>Tuesday</td><td>DS6A-511</td><td>DS6A-501 AB</td><td>DS6A-511</td><td>DS6A-507 SKS</td><td>DS6A-509 JK</td></tr>
+                    <tr><td>Wednesday</td><td>DS6A-511</td><td>DS6A-501 AB</td><td>DS6A-503 GA</td><td>DS6A-507 SKS</td><td>DS6A-503 GA</td></tr>
+                    <tr><td>Thursday</td><td>DS6A-511</td><td>DS6A-507 SKS</td><td>DS6A-501 AB</td><td>DS6A-503 GA(Lab)</td><td>DS6A-503 GA(Lab)</td></tr>
+                    <tr><td>Friday</td><td></td><td>DS6A-507 SKS(Lab)</td><td>DS6A-507 SKS(Lab)</td><td>DS6A-509 JK</td><td>DS6A-509 JK</td></tr>
+                    <tr><td>Saturday</td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td>Sunday</td><td></td><td></td><td></td><td></td><td></td></tr>
                 </tbody>
             </table>
         </div>
         <div class="tt-wrapper">
             <table class="tt-table">
                 <thead>
-                    <tr>
-                        <th>Code</th>
-                        <th>Title</th>
-                        <th>Credits (L-T-P)</th>
-                        <th>Faculty</th>
-                        <th>Contact No.</th>
-                        <th>Email</th>
-                    </tr>
+                    <tr><th>Code</th><th>Title</th><th>Credits (L-T-P)</th><th>Faculty</th><th>Contact No.</th><th>Email</th></tr>
                 </thead>
                 <tbody>
                     <tr class="tt-sub"><td colspan="6">CORE COURSES</td></tr>
-                    <tr>
-                        <td>DS6A-501</td>
-                        <td>Natural Language Processing</td>
-                        <td>4 (3-0-2)</td>
-                        <td>AB : Ms. Alfia Bagwala</td>
-                        <td>98278 07831</td>
-                        <td>alfianaseem@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-503</td>
-                        <td>Agentic AI</td>
-                        <td>4 (3-0-1)</td>
-                        <td>GA : Ms. Garima Agrawal</td>
-                        <td>8989516924</td>
-                        <td>agrawal.garima1998@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-505</td>
-                        <td>Artificial Intelligence: Foundations and Algorithms</td>
-                        <td>4 (3-0-2)</td>
-                        <td>NPTEL</td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-507</td>
-                        <td>High Performance Computing</td>
-                        <td>4 (3-0-2)</td>
-                        <td>SKS : Dr. Shishir Kumar Shandilya</td>
-                        <td>9009972032</td>
-                        <td>shishir.davv@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-509</td>
-                        <td>Multivariate Analytics</td>
-                        <td>4 (3-0-2)</td>
-                        <td>JK : Dr. Jalaj Katare</td>
-                        <td>9893204536</td>
-                        <td>dr.jalajkatare@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-511</td>
-                        <td>Project Report Writing</td>
-                        <td>3 (3-0-0)</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>DS6A-513</td>
-                        <td>Minor Project</td>
-                        <td>6</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td>DS6A-501</td><td>Natural Language Processing</td><td>4 (3-0-2)</td><td>AB : Ms. Alfia Bagwala</td><td>98278 07831</td><td>alfianaseem@gmail.com</td></tr>
+                    <tr><td>DS6A-503</td><td>Agentic AI</td><td>4 (3-0-1)</td><td>GA : Ms. Garima Agrawal</td><td>8989516924</td><td>agrawal.garima1998@gmail.com</td></tr>
+                    <tr><td>DS6A-505</td><td>Artificial Intelligence: Foundations and Algorithms</td><td>4 (3-0-2)</td><td>NPTEL</td><td></td><td></td></tr>
+                    <tr><td>DS6A-507</td><td>High Performance Computing</td><td>4 (3-0-2)</td><td>SKS : Dr. Shishir Kumar Shandilya</td><td>9009972032</td><td>shishir.davv@gmail.com</td></tr>
+                    <tr><td>DS6A-509</td><td>Multivariate Analytics</td><td>4 (3-0-2)</td><td>JK : Dr. Jalaj Katare</td><td>9893204536</td><td>dr.jalajkatare@gmail.com</td></tr>
+                    <tr><td>DS6A-511</td><td>Project Report Writing</td><td>3 (3-0-0)</td><td></td><td></td><td></td></tr>
+                    <tr><td>DS6A-513</td><td>Minor Project</td><td>6</td><td></td><td></td><td></td></tr>
                     <tr class="tt-sub"><td colspan="6">COMPREHENSIVE VIVA-VOCE</td></tr>
-                    <tr>
-                        <td></td>
-                        <td>Comprehensive Viva-Voce</td>
-                        <td>4</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    <tr><td></td><td>Comprehensive Viva-Voce</td><td>4</td><td></td><td></td><td></td></tr>
                     <tr class="tt-sub"><td colspan="2">Total Credits</td><td colspan="4">33</td></tr>
                 </tbody>
             </table>
@@ -1134,6 +559,231 @@
 
     <p class="tt-info" style="margin-top:25px;">Dr. Govind Maheshwari, Head, School of Data Science and Forecasting, Devi Ahilya Vishwavidyalaya, Takshashila Campus, Khandwa Road, Indore (M.P.)</p>
 </div>
+
+    </div>
+</details>
+
+<details class="tt-toggle">
+    <summary>Examination Time Table</summary>
+    <div class="tt-toggle-body">
+
+<div class="tt-section tt-exam">
+    <h3>Semester End Examination Time Table</h3>
+    <p class="tt-pdf"><a href="Revised_Timetable_final_examination_of_November_and_December_2026.pdf" target="_blank">Download Revised Time Table - Nov/Dec 2026 (PDF)</a> &nbsp;|&nbsp; <a href="Final_examination_Time_table_of_first_year_December_2026.pdf" target="_blank">Download First Year Time Table - Dec 2026 (PDF)</a></p>
+
+    <h3>III, V, VII &amp; IX Semester (Revised) - 25 Nov to 7 Dec 2026</h3>
+    <div class="tt-semester">
+        <h4>MBA in Business Analytics - III Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-11-2026</td><td>Wednesday</td><td>DS5A-605</td><td>Natural Language Processing</td></tr>
+                    <tr><td>27-11-2026</td><td>Friday</td><td>DS5A-601</td><td>Forecasting Methods</td></tr>
+                    <tr><td>30-11-2026</td><td>Monday</td><td>DS5A-603</td><td>Introduction of LLM</td></tr>
+                    <tr><td>02-12-2026</td><td>Wednesday</td><td>DS5A-607</td><td>Research Methodology</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS5A-621</td><td>Marketing Analytics</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS5A-623</td><td>Financial Analytics</td></tr>
+                    <tr><td>07-12-2026</td><td>Monday</td><td>DS5A-643</td><td>Hadoop &amp; Spark</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Sc. (Data Science &amp; Analytics) - III Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-11-2026</td><td>Wednesday</td><td>DS5B-601</td><td>Deep Learning</td></tr>
+                    <tr><td>27-11-2026</td><td>Friday</td><td>DS5B-603</td><td>Forecasting Methods</td></tr>
+                    <tr><td>30-11-2026</td><td>Monday</td><td>DS5B-605</td><td>Reinforcement Learning</td></tr>
+                    <tr><td>02-12-2026</td><td>Wednesday</td><td>DS5B-607</td><td>Research Methodology</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS5B-621</td><td>Social Media Analytics</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS5B-623</td><td>Text and Image Analytics</td></tr>
+                    <tr><td>07-12-2026</td><td>Monday</td><td>DS5B-641</td><td>Introduction to LLM</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Tech AI &amp; Data Science - III Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-11-2026</td><td>Wednesday</td><td>DS6A-201</td><td>Design and Analysis of Algorithm</td></tr>
+                    <tr><td>27-11-2026</td><td>Friday</td><td>DS6A-202</td><td>Probability Distributions</td></tr>
+                    <tr><td>30-11-2026</td><td>Monday</td><td>DS6A-203</td><td>Computer Architecture</td></tr>
+                    <tr><td>02-12-2026</td><td>Wednesday</td><td>DS6A-204</td><td>Numerical Methods / Engineering Economics</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS6A-205</td><td>Communication Skills</td></tr>
+                    <tr><td>07-12-2026</td><td>Monday</td><td>DS6A-206</td><td>Object Oriented Programming</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Tech AI &amp; Data Science - V Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-11-2026</td><td>Wednesday</td><td>DS6A-301</td><td>Data Mining and Data Warehousing</td></tr>
+                    <tr><td>27-11-2026</td><td>Friday</td><td>DS6A-302</td><td>Java Programming</td></tr>
+                    <tr><td>30-11-2026</td><td>Monday</td><td>DS6A-303</td><td>Data Engineering</td></tr>
+                    <tr><td>02-12-2026</td><td>Wednesday</td><td>DS6A-304</td><td>Statistical Inference</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS6A-305</td><td>Soft Computing</td></tr>
+                    <tr><td>07-12-2026</td><td>Monday</td><td>DS6A-306</td><td>Computer Networks</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Tech AI &amp; Data Science - VII Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-11-2026</td><td>Wednesday</td><td>DS6A-401</td><td>Data Visualization</td></tr>
+                    <tr><td>27-11-2026</td><td>Friday</td><td>DS6A-402</td><td>Big Data Computing</td></tr>
+                    <tr><td>30-11-2026</td><td>Monday</td><td>DS6A-403</td><td>Cloud Computing</td></tr>
+                    <tr><td>02-12-2026</td><td>Wednesday</td><td>DS6A-404</td><td>Forecasting Methods</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS6A-406</td><td>Machine Learning Using Python</td></tr>
+                    <tr><td>07-12-2026</td><td>Monday</td><td>DS6A-405</td><td>Cryptography</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Tech AI &amp; Data Science - IX Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>25-11-2026</td><td>Wednesday</td><td>DS6A-501</td><td>Natural Language Processing</td></tr>
+                    <tr><td>27-11-2026</td><td>Friday</td><td>DS6A-503</td><td>Agentic AI</td></tr>
+                    <tr><td>30-11-2026</td><td>Monday</td><td>DS6A-505</td><td>Artificial Intelligence: Foundations and Algorithms</td></tr>
+                    <tr><td>02-12-2026</td><td>Wednesday</td><td>DS6A-507</td><td>High Performance Computing</td></tr>
+                    <tr><td>04-12-2026</td><td>Friday</td><td>DS6A-509</td><td>Multivariate Analytics</td></tr>
+                    <tr><td>07-12-2026</td><td>Monday</td><td>DS6A-511</td><td>Project Report Writing</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h3>I Semester - 8 Dec to 23 Dec 2026</h3>
+    <div class="tt-semester">
+        <h4>MBA (Business Analytics) - I Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>08-12-2026</td><td>Tuesday</td><td>DS5A-605</td><td>Principles of Management</td></tr>
+                    <tr><td>10-12-2026</td><td>Thursday</td><td>DS5A-601</td><td>Principles of Economics</td></tr>
+                    <tr><td>12-12-2026</td><td>Saturday</td><td>DS5A-603</td><td>Advanced Database Management Systems</td></tr>
+                    <tr><td>14-12-2026</td><td>Monday</td><td>DS5A-607</td><td>Python for Analytics</td></tr>
+                    <tr><td>16-12-2026</td><td>Wednesday</td><td>DS5A-621</td><td>Probability and Statistics Methods</td></tr>
+                    <tr><td>18-12-2026</td><td>Friday</td><td>DS5A-623</td><td>Spreadsheet Modelling</td></tr>
+                    <tr><td>21-12-2026</td><td>Monday</td><td>DS5A-643</td><td>Marketing Management / Financial Management</td></tr>
+                    <tr><td>23-12-2026</td><td>Wednesday</td><td>DS5A-551</td><td>Business Report Writing and Communication</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Sc. (Data Science &amp; Analytics) - I Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>08-12-2026</td><td>Tuesday</td><td>DS5B-501</td><td>Linear Algebra and Advance Calculus</td></tr>
+                    <tr><td>10-12-2026</td><td>Thursday</td><td>DS5B-505</td><td>Advanced Database Management System</td></tr>
+                    <tr><td>12-12-2026</td><td>Saturday</td><td>DS5B-507</td><td>Probability and Statistics Methods</td></tr>
+                    <tr><td>14-12-2026</td><td>Monday</td><td>DS5B-509</td><td>Python for Analytics</td></tr>
+                    <tr><td>16-12-2026</td><td>Wednesday</td><td>DS5B-511</td><td>Advanced Excel</td></tr>
+                    <tr><td>18-12-2026</td><td>Friday</td><td>DS5B-523</td><td>Technical Communication</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Tech AI &amp; Data Science - I Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>08-12-2026</td><td>Tuesday</td><td>DS6A-101</td><td>Mathematics-I</td></tr>
+                    <tr><td>10-12-2026</td><td>Thursday</td><td>DS6A-102</td><td>Physics</td></tr>
+                    <tr><td>12-12-2026</td><td>Saturday</td><td>DS6A-103</td><td>Descriptive Statistics</td></tr>
+                    <tr><td>14-12-2026</td><td>Monday</td><td>DS6A-104</td><td>Fundamentals of Programming</td></tr>
+                    <tr><td>16-12-2026</td><td>Wednesday</td><td>DS6A-105</td><td>Introduction to Computer Science</td></tr>
+                    <tr><td>18-12-2026</td><td>Friday</td><td>DS6A-106</td><td>Environmental Science</td></tr>
+                    <tr><td>21-12-2026</td><td>Monday</td><td>DS6A-107</td><td>Fundamentals of Electronics</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tt-semester">
+        <h4>M.Tech. (DS / BDA) - I Semester</h4>
+        <p class="tt-info">Time: 11:00 AM - 2:00 PM</p>
+        <div class="tt-wrapper">
+            <table class="tt-table">
+                <thead>
+                    <tr><th>Date</th><th>Day</th><th>Subject Code</th><th>Subject</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>08-12-2026</td><td>Tuesday</td><td>DS7A-701</td><td>Statistical Research Methods</td></tr>
+                    <tr><td>10-12-2026</td><td>Thursday</td><td>DS7A-703</td><td>Forecasting Methods</td></tr>
+                    <tr><td>12-12-2026</td><td>Saturday</td><td>DS7A-705</td><td>Design and Analysis of Algorithms</td></tr>
+                    <tr><td>14-12-2026</td><td>Monday</td><td>DS7A-707</td><td>Advanced Database Management Systems</td></tr>
+                    <tr><td>16-12-2026</td><td>Wednesday</td><td>DS7A-709</td><td>Programming</td></tr>
+                    <tr><td>18-12-2026</td><td>Friday</td><td>DS7A-711</td><td>Introduction to LLM</td></tr>
+                    <tr><td>21-12-2026</td><td>Monday</td><td>DS7A-713</td><td>Advanced Excel</td></tr>
+                    <tr><td>23-12-2026</td><td>Wednesday</td><td>DS7A-723</td><td>Soft Computing</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+    </div>
+</details>
+
 
 
   </div>
