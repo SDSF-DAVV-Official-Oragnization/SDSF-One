@@ -375,22 +375,126 @@ a {
 }
 
 .btn-login-header {
-  display: inline-flex;
-  align-items: center;
-  padding: 6px 16px;
-  background: #0f172a;
-  color: #ffffff;
-  border: 1px solid #0f172a;
-  border-radius: var(--radius-sm);
-  font-size: 0.82rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: var(--transition);
+  display: none;
 }
 
-.btn-login-header:hover {
+/* Header Dropdown Menu (Themed after Image 2) */
+.chronicle-dropdown {
+  position: relative;
+}
+
+.chronicle-dropdown-toggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-chevron {
+  transition: transform 0.2s ease;
+  margin-left: 2px;
+  flex-shrink: 0;
+  color: #64748b;
+}
+
+.chronicle-dropdown:hover .dropdown-chevron,
+.chronicle-dropdown.open .dropdown-chevron {
+  transform: rotate(180deg);
+  color: #1e293b;
+}
+
+.chronicle-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16), 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 8px 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  pointer-events: none;
+}
+
+.chronicle-dropdown:hover .chronicle-dropdown-menu,
+.chronicle-dropdown.open .chronicle-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.chronicle-dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 20px;
+  color: #1e293b;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  transition: background 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+  border-left: 3px solid transparent;
+}
+
+.chronicle-dropdown-item:hover {
+  background: #f1f5f9;
+  color: #2563eb;
+  padding-left: 24px;
+  border-left-color: #2563eb;
+}
+
+/* Quick Timetable Selector Tabs */
+.tt-type-selector-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 18px;
+  padding: 6px;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.tt-type-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  color: #475569;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tt-type-btn:hover {
+  color: #0f172a;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.tt-type-btn.active {
   background: #2563eb;
-  border-color: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.tt-type-btn.active svg {
+  stroke: #ffffff;
 }
 
 /* ==========================================================================

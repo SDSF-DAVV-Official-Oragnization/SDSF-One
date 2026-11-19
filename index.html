@@ -59,14 +59,6 @@
   <nav class="chronicle-navbar" aria-label="Main Navigation">
     <div class="chronicle-navbar-inner">
       <ul class="chronicle-nav-list">
-        <!-- HOME Tab -->
-        <li class="chronicle-nav-item">
-          <a href="index.html" class="chronicle-nav-link ">
-            <svg class="nav-icon" width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path></svg>
-            <span class="nav-text">HOME</span>
-          </a>
-        </li>
-
         <!-- NOTICES Tab -->
         <li class="chronicle-nav-item">
           <a href="index.html" class="chronicle-nav-link active">
@@ -92,12 +84,21 @@
           </a>
         </li>
 
-        <!-- TIME TABLE Tab -->
-        <li class="chronicle-nav-item">
-          <a href="timetable.html" class="chronicle-nav-link ">
+        <!-- TIME TABLE Tab with Dropdown -->
+        <li class="chronicle-nav-item chronicle-dropdown">
+          <a href="timetable.html" class="chronicle-nav-link chronicle-dropdown-toggle" id="ttDropdownToggle" aria-haspopup="true" aria-expanded="false">
             <svg class="nav-icon" width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"></path></svg>
             <span class="nav-text">TIME TABLE</span>
+            <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
           </a>
+          <div class="chronicle-dropdown-menu" role="menu">
+            <a href="timetable.html?type=academic" class="chronicle-dropdown-item" role="menuitem">
+              <span>Academic Time Table</span>
+            </a>
+            <a href="timetable.html?type=exam" class="chronicle-dropdown-item" role="menuitem">
+              <span>Examination Time Table</span>
+            </a>
+          </div>
         </li>
 
         <!-- PLACEMENTS Tab (Replaces Auditorium Booking) -->
@@ -109,7 +110,7 @@
         </li>
       </ul>
 
-      <!-- Right Search Box & Login (as shown in Image 4) -->
+      <!-- Right Search Box -->
       <div class="chronicle-nav-right">
         <div class="chronicle-search-container">
           <input type="text" id="live-notices-search" placeholder="Search headlines, circulars..." onkeyup="handleLiveSearch(this.value)">
@@ -117,7 +118,6 @@
             <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           </button>
         </div>
-        <button type="button" class="btn-login-header" onclick="openLoginModal()">Login</button>
       </div>
     </div>
   </nav>
