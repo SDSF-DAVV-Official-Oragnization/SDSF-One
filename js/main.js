@@ -6,7 +6,17 @@
 document.addEventListener('DOMContentLoaded', function () {
   initClock();
   initNoticeData();
+  initCategoryFromUrl();
 });
+
+function initCategoryFromUrl() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const cat = urlParams.get('category');
+  if (cat) {
+    const matchBtn = document.querySelector(`.sec-nav-link[data-category="${cat}"]`);
+    filterByCategory(cat, matchBtn);
+  }
+}
 
 // Live Campus Clock updater (Matches SDSF Chronicle theme in Image 2)
 function initClock() {

@@ -1,0 +1,9 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/index.php", "destination": "/index.html" },
+    { "source": "/faculty.php", "destination": "/faculty.html" },
+    { "source": "/timetable.php", "destination": "/timetable.html" },
+    { "source": "/placements.php", "destination": "/placements.html" }
+  ]
+}
