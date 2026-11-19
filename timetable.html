@@ -4,8 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Time Table | SDSF Live</title>
-  <link rel="stylesheet" href="css/style.css?v=2.1">
+  <link rel="stylesheet" href="css/style.css?v=2.2">
   <link rel="icon" type="image/png" href="Photoes/departmentlogo_transparent.png">
+  <style>
+    .tt-section-wrapper { margin-top: 36px; margin-bottom: 48px; }
+    .tt-category-header { display: flex; align-items: center; gap: 12px; background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); color: #ffffff; padding: 16px 24px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15); }
+    .tt-category-header h2 { font-family: inherit; font-size: 1.4rem; font-weight: 700; color: #ffffff; margin: 0; display: flex; align-items: center; gap: 10px; }
+    .tt-category-header .tt-header-badge { background: rgba(255, 255, 255, 0.2); font-size: 0.75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.05em; margin-left: auto; }
+    .tt-section { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 26px 30px; margin-bottom: 28px; box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04); }
+    .tt-section h3 { font-size: 1.35rem; font-weight: 700; color: #0f172a; margin: 20px 0 10px; line-height: 1.3; }
+    .tt-section > h3:first-child { margin-top: 0; }
+    .tt-pdf { margin: 10px 0 20px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .tt-pdf a { display: inline-flex; align-items: center; gap: 6px; background: #eff6ff; color: #1d4ed8; font-weight: 600; font-size: 0.88rem; padding: 7px 14px; border-radius: 6px; border: 1px solid #bfdbfe; text-decoration: none; transition: all 0.15s ease; }
+    .tt-pdf a:hover { background: #1d4ed8; color: #ffffff; border-color: #1d4ed8; text-decoration: none; }
+    .tt-semester { margin-top: 26px; padding-top: 20px; border-top: 1px dashed #e2e8f0; }
+    .tt-semester:first-of-type { border-top: none; padding-top: 0; }
+    .tt-semester h4 { font-size: 1.15rem; font-weight: 700; color: #1e293b; margin: 0 0 6px; }
+    .tt-info { color: #64748b; font-size: 0.9rem; font-weight: 500; margin: 0 0 14px; }
+    .tt-wrapper { overflow-x: auto; margin-bottom: 20px; border: 1px solid #cbd5e1; border-radius: 8px; background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.03); -webkit-overflow-scrolling: touch; }
+    .tt-table { width: 100%; border-collapse: collapse; min-width: 600px; font-size: 0.9rem; line-height: 1.45; color: #1e293b; background: #ffffff; }
+    .tt-table th { background: #1e3a8a !important; color: #ffffff !important; font-weight: 700; text-align: left; padding: 12px 14px; border: 1px solid #1e3a8a; white-space: nowrap; font-size: 0.875rem; letter-spacing: 0.02em; }
+    .tt-table td { padding: 10px 14px; border: 1px solid #e2e8f0; text-align: left; background: #ffffff; vertical-align: middle; }
+    .tt-table tbody tr:nth-child(even) td { background: #f8fafc; }
+    .tt-table tbody tr:hover td { background: #f1f5f9; }
+    .tt-table .tt-sub td { background: #e0e7ff !important; color: #3730a3 !important; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.03em; border-color: #c7d2fe; }
+    .tt-table .tt-break { text-align: center; font-weight: 700; background: #fef3c7 !important; color: #92400e; vertical-align: middle; letter-spacing: 0.05em; }
+  </style>
 </head>
 <body>
 
@@ -180,7 +204,14 @@
     </div>
 
     <!-- Academic Time Table Section -->
-    <div class="tt-section-wrapper" id="academic-timetable" style="margin-top: 30px;">
+    <div class="tt-section-wrapper" id="academic-timetable">
+      <div class="tt-category-header">
+        <h2>
+          <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+          Academic Time Table
+        </h2>
+        <span class="tt-header-badge">Session 2026-27</span>
+      </div>
 <!-- ============ AI & DS M.Tech (Dual Degree) Time Table ============ -->
 
 <div class="tt-section">
@@ -417,7 +448,14 @@
     <!-- End Academic Time Table Section -->
 
     <!-- Examination Time Table Section -->
-    <div class="tt-section-wrapper" id="examination-timetable" style="margin-top: 50px; padding-top: 30px; border-top: 2px solid #e2e8f0;">
+    <div class="tt-section-wrapper" id="examination-timetable" style="border-top: 2px solid #e2e8f0; padding-top: 30px;">
+      <div class="tt-category-header" style="background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%); box-shadow: 0 4px 12px rgba(15, 118, 110, 0.15);">
+        <h2>
+          <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+          Examination Time Table
+        </h2>
+        <span class="tt-header-badge">End Semester Exam</span>
+      </div>
 
 <div class="tt-section tt-exam">
     <h3>Semester End Examination Time Table</h3>
@@ -783,6 +821,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=2.1"></script>
+  <script src="js/main.js?v=2.2"></script>
 </body>
 </html>
