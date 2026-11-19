@@ -1783,3 +1783,89 @@ a {
     width: 100%;
   }
 }
+
+/* Visiting Faculty cards */
+.vf-back-link {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--blue-featured);
+  text-decoration: none;
+}
+.vf-back-link:hover { text-decoration: underline; }
+
+.vf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+.vf-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-top: 3px solid var(--active-blue-bar);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px 18px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  min-width: 0;
+}
+.vf-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-top-color: var(--crimson-accent);
+}
+
+.vf-avatar {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: var(--blue-soft-bg);
+  border: 2px solid var(--blue-soft-border);
+  color: var(--text-light);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+.vf-avatar svg { width: 58px; height: 58px; }
+
+.vf-name {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 2px;
+}
+.vf-role {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--crimson-accent);
+  margin-bottom: 12px;
+}
+
+.vf-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-light);
+}
+.vf-contact {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #475569;
+  text-decoration: none;
+  word-break: break-all;
+}
+.vf-contact svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--text-muted); }
+.vf-contact:hover { color: var(--blue-featured); }
+
