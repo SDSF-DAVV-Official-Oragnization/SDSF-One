@@ -1301,62 +1301,41 @@ a {
 }
 
 /* ==========================================================================
-   TIMETABLE & EXAMINATION TABLES (CLEAN, MODERN STYLING)
+   TIMETABLE & EXAMINATION TABLES (CLEAN, SIMPLE HANDCODED STYLING)
    ========================================================================== */
 .tt-section-wrapper {
-  margin-top: 36px;
-  margin-bottom: 48px;
+  margin-top: 24px;
+  margin-bottom: 40px;
 }
 
 .tt-category-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-  color: #ffffff;
-  padding: 16px 24px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.15);
+  border-bottom: 2px solid #1e293b;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
 }
 
 .tt-category-header h2 {
   font-family: inherit;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #1e293b;
   margin: 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.tt-category-header .tt-header-badge {
-  background: rgba(255, 255, 255, 0.2);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 3px 10px;
-  border-radius: 999px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-left: auto;
 }
 
 .tt-section {
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  border-radius: 12px;
-  padding: 26px 30px;
-  margin-bottom: 28px;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+  border-radius: 4px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
 }
 
 .tt-section h3 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: #0f172a;
-  margin: 20px 0 10px;
-  line-height: 1.3;
+  color: #1e293b;
+  margin: 16px 0 8px;
+  line-height: 1.35;
 }
 
 .tt-section > h3:first-child {
@@ -1364,40 +1343,25 @@ a {
 }
 
 .tt-pdf {
-  margin: 10px 0 20px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: center;
+  margin: 6px 0 16px;
+  font-size: 0.9rem;
 }
 
 .tt-pdf a {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: #eff6ff;
   color: #1d4ed8;
-  font-weight: 600;
-  font-size: 0.88rem;
-  padding: 7px 14px;
-  border-radius: 6px;
-  border: 1px solid #bfdbfe;
-  text-decoration: none;
-  transition: all 0.15s ease;
+  text-decoration: underline;
+  font-weight: 500;
+  margin-right: 12px;
 }
 
 .tt-pdf a:hover {
-  background: #1d4ed8;
-  color: #ffffff;
-  border-color: #1d4ed8;
-  text-decoration: none;
-  box-shadow: 0 2px 6px rgba(29, 78, 216, 0.25);
+  color: #1e40af;
 }
 
 .tt-semester {
-  margin-top: 26px;
-  padding-top: 20px;
-  border-top: 1px dashed #e2e8f0;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #e2e8f0;
 }
 
 .tt-semester:first-of-type {
@@ -1406,26 +1370,24 @@ a {
 }
 
 .tt-semester h4 {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #1e293b;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 
 .tt-info {
   color: #64748b;
-  font-size: 0.9rem;
-  font-weight: 500;
-  margin: 0 0 14px;
+  font-size: 0.88rem;
+  margin: 0 0 10px;
 }
 
 .tt-wrapper {
   overflow-x: auto;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   border: 1px solid #cbd5e1;
-  border-radius: 8px;
+  border-radius: 4px;
   background: #ffffff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1433,26 +1395,25 @@ a {
   width: 100%;
   border-collapse: collapse;
   min-width: 600px;
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-size: 0.88rem;
+  line-height: 1.4;
   color: #1e293b;
   background: #ffffff;
 }
 
 .tt-table th {
-  background: #1e3a8a;
-  color: #ffffff;
-  font-weight: 700;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  font-weight: 600;
   text-align: left;
-  padding: 12px 14px;
-  border: 1px solid #1e3a8a;
+  padding: 9px 12px;
+  border: 1px solid #1e293b;
   white-space: nowrap;
-  font-size: 0.875rem;
-  letter-spacing: 0.02em;
+  font-size: 0.85rem;
 }
 
 .tt-table td {
-  padding: 10px 14px;
+  padding: 8px 12px;
   border: 1px solid #e2e8f0;
   text-align: left;
   background: #ffffff;
@@ -1468,21 +1429,19 @@ a {
 }
 
 .tt-table .tt-sub td {
-  background: #e0e7ff !important;
-  color: #3730a3 !important;
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-  border-color: #c7d2fe;
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  font-weight: 600;
+  font-size: 0.84rem;
+  border-color: #cbd5e1;
 }
 
 .tt-table .tt-break {
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
   background: #fef3c7 !important;
   color: #92400e;
   vertical-align: middle;
-  letter-spacing: 0.05em;
 }
 
 /* ==========================================================================

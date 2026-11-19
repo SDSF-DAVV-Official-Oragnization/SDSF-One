@@ -4,6 +4,7 @@
     { "source": "/index.php", "destination": "/index.html" },
     { "source": "/faculty.php", "destination": "/faculty.html" },
     { "source": "/timetable.php", "destination": "/timetable.html" },
-    { "source": "/placements.php", "destination": "/placements.html" }
+    { "source": "/placements.php", "destination": "/placements.html" },
+    { "source": "/visiting_faculty.php", "destination": "/visiting_faculty.html" }
   ]
 }
