@@ -2682,8 +2682,8 @@ body.placement-gallery-open {
 .forms-category-count { color: var(--text-muted); font-size: .84rem; }
 .forms-list-section { margin-top: 30px; scroll-margin-top: 90px; }
 .forms-list-section[hidden] { display: none; }
-.forms-list-section h2 { margin: 0 0 14px; color: var(--text-heading); font-size: 1.35rem; }
-.forms-table-wrap { overflow-x: auto; border: 1px solid var(--border-medium); border-radius: var(--radius-sm); background: #fff; }
+.forms-list-section h2 { margin: 0 0 48px; color: #111827; font-family: Arial, sans-serif; font-size: 1.45rem; font-weight: 700; text-align: center; }
+.forms-table-wrap { overflow-x: auto; border: 0; border-radius: 0; background: transparent; }
 .forms-table { width: 100%; border-collapse: collapse; text-align: left; }
 .forms-table th, .forms-table td { padding: 13px 16px; border-bottom: 1px solid var(--border-medium); }
 .forms-table th { background: #edf3f8; color: var(--text-heading); font-size: .82rem; letter-spacing: .04em; text-transform: uppercase; }
@@ -2693,3 +2693,12 @@ body.placement-gallery-open {
 .forms-table a { color: #1d4ed8; font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 .forms-table a:hover, .forms-table a:focus-visible { color: #1e3a8a; }
 @media (max-width: 640px) { .forms-category-grid { grid-template-columns: 1fr; } .forms-table th, .forms-table td { padding: 11px 10px; } }
+.forms-table-paired { min-width: 760px; table-layout: fixed; }
+.forms-table-paired td { width: 42%; border: 1px solid #888; padding: 12px; color: #111; font-size: 1rem; font-weight: 700; }
+.forms-table-paired td.forms-number { width: 8%; white-space: nowrap; }
+.forms-table-paired tbody tr:nth-child(even) { background: #f1f1f1; }
+.forms-table-paired a { color: #2118c7; font-size: 1rem; font-weight: 700; text-decoration: underline; }
+.forms-table-paired a:visited { color: #633488; }
+.forms-table-paired a:hover, .forms-table-paired a:focus-visible { color: #172554; }
+.forms-table-paired td.forms-number { color: #111; }
+.forms-table-paired tbody tr:last-child td { border-bottom: 1px solid #888; }
